@@ -1,0 +1,6 @@
+14:59:56 INFO  : Registering command handlers for SDK TCF services
+14:59:58 INFO  : Launching XSCT server: xsct.bat -interactive C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\temp_xsdb_launch_script.tcl
+15:00:03 INFO  : XSCT server has started successfully.
+15:00:05 INFO  : Successfully done setting XSCT server connection channel  
+15:00:05 INFO  : Successfully done setting SDK workspace  
+15:00:05 INFO  : Processing command line option -hwspec C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper.hdf.
