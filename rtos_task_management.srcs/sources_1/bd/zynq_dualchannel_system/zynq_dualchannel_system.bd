@@ -35,6 +35,10 @@
       "leds_4bits": {
         "mode": "Master",
         "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
+      },
+      "sws_4bits": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
       }
     },
     "components": {
@@ -42,6 +46,9 @@
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "zynq_dualchannel_system_axi_gpio_0_0",
         "parameters": {
+          "GPIO2_BOARD_INTERFACE": {
+            "value": "sws_4bits"
+          },
           "GPIO_BOARD_INTERFACE": {
             "value": "btns_4bits"
           },
@@ -1104,6 +1111,18 @@
           }
         },
         "interface_nets": {
+          "xbar_to_m01_couplers": {
+            "interface_ports": [
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
+            ]
+          },
+          "m01_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M01_AXI",
+              "m01_couplers/M_AXI"
+            ]
+          },
           "m00_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M00_AXI",
@@ -1126,18 +1145,6 @@
             "interface_ports": [
               "xbar/M00_AXI",
               "m00_couplers/S_AXI"
-            ]
-          },
-          "m01_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m01_couplers": {
-            "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
             ]
           }
         },
@@ -1174,6 +1181,24 @@
       }
     },
     "interface_nets": {
+      "axi_gpio_0_GPIO2": {
+        "interface_ports": [
+          "sws_4bits",
+          "axi_gpio_0/GPIO2"
+        ]
+      },
+      "ps7_0_axi_periph_M00_AXI": {
+        "interface_ports": [
+          "axi_gpio_0/S_AXI",
+          "ps7_0_axi_periph/M00_AXI"
+        ]
+      },
+      "ps7_0_axi_periph_M01_AXI": {
+        "interface_ports": [
+          "axi_gpio_1/S_AXI",
+          "ps7_0_axi_periph/M01_AXI"
+        ]
+      },
       "axi_gpio_1_GPIO": {
         "interface_ports": [
           "leds_4bits",
@@ -1202,18 +1227,6 @@
         "interface_ports": [
           "DDR",
           "processing_system7_0/DDR"
-        ]
-      },
-      "ps7_0_axi_periph_M00_AXI": {
-        "interface_ports": [
-          "axi_gpio_0/S_AXI",
-          "ps7_0_axi_periph/M00_AXI"
-        ]
-      },
-      "ps7_0_axi_periph_M01_AXI": {
-        "interface_ports": [
-          "axi_gpio_1/S_AXI",
-          "ps7_0_axi_periph/M01_AXI"
         ]
       }
     },
