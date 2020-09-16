@@ -31,12 +31,15 @@
  *
  * Created on: 	15 September 2020 (based on FreeRTOS_Hello_World.c)
  *     Author: 	Leomar Duran
- *    Version: 	1.2
+ *    Version: 	1.3
  */
 
 /********************************************************************************************
 * VERSION HISTORY
 ********************************************************************************************
+* 	v1.3 - 16 September 2020
+* 		Added stub for TaskSW.  Optimized TaskBTN.
+*
 * 	v1.2 - 16 September 2020
 * 		Added TaskBTN feature that controls TaskLED.
 *
@@ -54,6 +57,9 @@
 * TaskLED := a counter from 0 to 15, then looping back to 0 that is displayed in the LEDs.
 *
 * TaskBTN := reads the buttons to control the other tasks
+*
+* TaskSW  := reads the switches to control the other tasks
+*
 *******************************************************************************************/
 
 /* FreeRTOS includes. */
@@ -63,10 +69,15 @@
 #include "timers.h"
 /* Xilinx includes. */
 #include "xil_printf.h"
+#define	printf	xil_printf
 #include "xparameters.h"
 #include "xgpio.h"
 #include "xstatus.h"
-//#define	printf	xil_printf
+
+/* task definitions */
+#define	DO_TASK_LED	1								/* whether to do TaskLED */
+#define	DO_TASK_BTN	1								/* whether to do TaskBTN */
+#define	DO_TASK_SW 	0								/* whether to do TaskSW */
 
 /* GPIO definitions */
 #define  IN_DEVICE_ID	XPAR_AXI_GPIO_0_DEVICE_ID	/* GPIO device for input */
@@ -79,73 +90,102 @@
 #define LED_CHANNEL	1								/* GPIO port for LEDs */
 
 /* GPIO instances */
-XGpio BTNInst;									/* GPIO Device driver instance for buttons */
-XGpio  SWInst;									/* GPIO Device driver instance for switches */
-XGpio LEDInst;									/* GPIO Device driver instance for LEDs */
+XGpio  InInst;									/* GPIO Device driver instance for input */
+XGpio OutInst;									/* GPIO Device driver instance for output */
 
-/* bit masks */
-#define	BTN01	0b0001
-#define	BTN2	0b0100
-#define	BTN3	0b1000
-#define	 SW0	0b0001
-#define	 SW1	0b0010
-#define	 SW2	0b0100
-#define	 SW3	0b1000
+/* bit masks for on */
+#define	      ON4 	0b1111						/* 4 bit on  */
+#define	BTN10_ON  	0b1100
+#define	 BTN2_ON  	0b1011
+#define	 BTN3_ON  	0b0111
+#define	 SW10_ON  	0b1100
+#define	  SW2_ON  	0b1011
+#define	  SW3_ON  	0b0111
+
+/* bit masks for off */
+#define       OFF4	0b0000						/* 4 bit off */
+#define	BTN10_OFF 	0b0011
+#define	 BTN2_OFF 	0b0100
+#define	 BTN3_OFF 	0b1000
+#define	 SW10_OFF 	0b0011
+#define	  SW2_OFF 	0b0100
+#define	  SW3_OFF 	0b1000
 /*-----------------------------------------------------------*/
 
 /* The tasks as described at the top of this file. */
 static void prvTaskLED( void *pvParameters );
 static void prvTaskBTN( void *pvParameters );
+static void prvTaskSW ( void *pvParameters );
 /*-----------------------------------------------------------*/
 
 /* The task handles to control other tasks. */
 static TaskHandle_t xTaskLED;
 static TaskHandle_t xTaskBTN;
+static TaskHandle_t xTaskSW;
 /* The LED Counter. */
-long LEDCntr = LED;
+int ledCntr = LED;
+/* The last value of button. */
+int btn;
 
 int main( void )
 {
 	int Status;
 
-	printf( "Starting TaskLED. . .\r\n" );
-	/* Create TaskLED with priority 1. */
-	xTaskCreate( 	prvTaskLED, 				/* The function that implements the task. */
-			( const char * ) "TaskLED", 		/* Text name for the task, provided to assist debugging only. */
-					configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
-					NULL, 						/* The task parameter is not used, so set to NULL. */
-					( UBaseType_t ) 1,			/* The next to lowest priority. */
-					&xTaskLED );
-	printf( "\tSuccessful\r\n" );
+	if (DO_TASK_LED) {
+		printf( "Starting TaskLED. . .\r\n" );
+		/* Create TaskLED with priority 1. */
+		xTaskCreate( 	prvTaskLED, 				/* The function that implements the task. */
+				( const char * ) "TaskLED", 		/* Text name for the task, provided to assist debugging only. */
+						configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
+						NULL, 						/* The task parameter is not used, so set to NULL. */
+						( UBaseType_t ) 1,			/* The next to lowest priority. */
+						&xTaskLED );
+		printf( "\tSuccessful\r\n" );
+	}
 
-	printf( "Starting TaskBTN. . .\r\n" );
-	/* Create TaskBTN with priority 1. */
-	xTaskCreate(
-				prvTaskBTN,						/* The function implementing the task. */
-			( const char * ) "TaskBTN",			/* Text name provided for debugging. */
-				configMINIMAL_STACK_SIZE,		/* Not much need for a stack. */
-				NULL,							/* The task parameter, not in use. */
-				( UBaseType_t ) 1,				/* The next to lowest priority. */
-				&xTaskBTN );
-	printf( "\tSuccessful\r\n" );
+	if (DO_TASK_BTN) {
+		printf( "Starting TaskBTN. . .\r\n" );
+		/* Create TaskBTN with priority 1. */
+		xTaskCreate(
+					prvTaskBTN,						/* The function implementing the task. */
+				( const char * ) "TaskBTN",			/* Text name provided for debugging. */
+					configMINIMAL_STACK_SIZE,		/* Not much need for a stack. */
+					NULL,							/* The task parameter, not in use. */
+					( UBaseType_t ) 1,				/* The next to lowest priority. */
+					&xTaskBTN );
+		printf( "\tSuccessful\r\n" );
+	}
+
+	if (DO_TASK_SW) {
+		printf( "Starting TaskSW . . .\r\n" );
+		/* Create TaskSW with priority 1. */
+		xTaskCreate(
+					prvTaskSW,						/* The function implementing the task. */
+				( const char * ) "TaskSW",			/* Text name provided for debugging. */
+					configMINIMAL_STACK_SIZE,		/* Not much need for a stack. */
+					NULL,							/* The task parameter, not in use. */
+					( UBaseType_t ) 1,				/* The next to lowest priority. */
+					&xTaskSW );
+		printf( "\tSuccessful\r\n" );
+	}
 
 	/* initialize the GPIO driver for the LEDs */
-	Status = XGpio_Initialize(&LEDInst, OUT_DEVICE_ID);
+	Status = XGpio_Initialize(&OutInst, OUT_DEVICE_ID);
 	if (Status != XST_SUCCESS) {
 		printf("GPIO output to the LEDs failed!\r\n");
 		return 0;
 	}
 	/* set LEDs to output */
-	XGpio_SetDataDirection(&LEDInst, LED_CHANNEL, 0x00);
+	XGpio_SetDataDirection(&OutInst, LED_CHANNEL, 0x00);
 
 	/* initialize the GPIO driver for the buttons */
-	Status = XGpio_Initialize(&BTNInst,  IN_DEVICE_ID);
+	Status = XGpio_Initialize( &InInst,  IN_DEVICE_ID);
 	if (Status != XST_SUCCESS) {
-		printf("GPIO input to the buttons failed!\r\n");
+		printf("GPIO input from the buttons and switches failed!\r\n");
 		return 0;
 	}
 	/* set buttons to input */
-	XGpio_SetDataDirection(&BTNInst, BTN_CHANNEL, 0xFF);
+	XGpio_SetDataDirection( &InInst, BTN_CHANNEL, 0xFF);
 
 	/* Start the tasks and timer running. */
 	vTaskStartScheduler();
@@ -167,13 +207,14 @@ const TickType_t LEDseconds = pdMS_TO_TICKS( LED_DELAY );
 	for( ;; )
 	{
 		/* display the counter */
-		XGpio_DiscreteWrite(&LEDInst, LED_CHANNEL, LEDCntr);
+		XGpio_DiscreteWrite(&OutInst, LED_CHANNEL, ledCntr);
+		printf("count: %d\r\n", ledCntr);
 
 		/* Delay for visualization. */
 		vTaskDelay( LEDseconds );
 
 		/* update the counter */
-		++LEDCntr;
+		++ledCntr;
 	}
 }
 
@@ -182,33 +223,44 @@ const TickType_t LEDseconds = pdMS_TO_TICKS( LED_DELAY );
 static void prvTaskBTN( void *pvParameters )
 {
 const TickType_t BTNseconds = pdMS_TO_TICKS( BTN_DELAY );
-	int btn;	/* Hold the current button value. */
+	int nextBtn;	/* Hold the new button value. */
 	for( ;; )
 	{
 		/* Read input from the buttons. */
-		btn = XGpio_DiscreteRead(&BTNInst, BTN_CHANNEL);
+		nextBtn = XGpio_DiscreteRead(&InInst, BTN_CHANNEL);
 
-		/* If BTN2 is depressed, regardless of the status of
-		 * BTN0 and BTN1, then TaskLED is resumed.  So BTN2
-		 * gets priority. */
-		if ( ( btn & BTN2 ) == BTN2 ) {
-			/* delay until the end of the bounce */
-			vTaskDelay(BTNseconds);
-			/* check again before acting */
-			if ( ( btn & BTN2 ) == BTN2 ) {
-				vTaskResume(xTaskLED);
-			}
-		}
-		/* Otherwise if BTN0 and BTN1 are depressed at some
-		 * point together then TaskLED is suspended */
-		else if ( (btn & BTN01 ) == BTN01 ){
-			/* delay until the end of the bounce */
-			vTaskDelay(BTNseconds);
-			/* check again before acting */
-			if ( ( btn & BTN01 ) == BTN01 ) {
-				vTaskSuspend(xTaskLED);
-			}
-		}
-		//XGpio_DiscreteWrite(&LEDInst, LED_CHANNEL, btn);
-	}
+		/* Debounce: */
+		/* If the button has changed, */
+		if ( btn != nextBtn ) {
+			btn = nextBtn;	/* store the old value */
+			vTaskDelay( BTNseconds );	/* delay until the end of the bounce */
+			nextBtn = XGpio_DiscreteRead( &InInst, BTN_CHANNEL );	/* read again */
+			/* if the button value is still the same, continue */
+			if ( btn == nextBtn ) {
+				printf("Button changed to %x:", btn);
+
+				btn = nextBtn;	/* update btn */
+				/* If BTN2 is depressed, regardless of the
+				 * status of BTN0 and BTN1, then TaskLED is
+				 * resumed.  So BTN2 gets priority. */
+				if ( ( btn | BTN2_ON ) == ON4 ) {
+					vTaskResume(xTaskLED);
+					printf("TaskLED is resumed.");
+				}
+				/* Otherwise if BTN0 and BTN1 are depressed at
+				 * some point together then TaskLED is
+				 * suspended */
+				else if ( ( btn | BTN10_ON ) == ON4 ) {
+					vTaskSuspend(xTaskLED);
+					printf("TaskLED is suspended.");
+				}
+			} /* end if ( btn == nextBtn ) check if button is consistent */
+		} /* end if ( btn != nextBtn ) check if button has changed since last call */
+	} /* end for( ;; ) */
+}
+
+
+/*-----------------------------------------------------------*/
+static void prvTaskSW( void *pvParameters )
+{
 }
