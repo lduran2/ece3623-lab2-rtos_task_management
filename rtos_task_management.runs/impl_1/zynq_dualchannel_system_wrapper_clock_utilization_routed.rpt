@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Sep 15 16:49:11 2020
+| Date         : Tue Sep 15 23:10:25 2020
 | Host         : DESKTOP-7QAIPHN running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file zynq_dualchannel_system_wrapper_clock_utilization_routed.rpt
 | Design       : zynq_dualchannel_system_wrapper

@@ -125,3 +125,896 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
+23:29:01 **** Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:109:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      xTaskLED );
+      ^~~~~~~~
+In file included from ../src/rtos_task_management.c:57:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78188	   3400	  89456	 171044	  29c24	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+23:30:01 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:30:18 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:40:07 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c:61:10: fatal error: printf.h: No such file or directory
+ #include "printf.h"
+          ^~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/rtos_task_management.o] Error 1
+23:40:21 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c:61:10: fatal error: printf.h: No such file or directory
+ #include "printf.h"
+          ^~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/rtos_task_management.o] Error 1
+23:40:37 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:101:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . ." );
+  ^~~~~~
+../src/rtos_task_management.c:101:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:101:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:65:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:101:2:
+  printf( "Starting TaskLED. . ." );
+  ^~~~~~
+../src/rtos_task_management.c:109:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      xTaskLED );
+      ^~~~~~~~
+In file included from ../src/rtos_task_management.c:57:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94292	   3404	  89456	 187152	  2db10	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+23:59:25 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:107:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:107:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:107:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:66:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:107:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:114:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      xTaskLED );
+      ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/rtos_task_management.c:124:5: warning: passing argument 5 of 'xTaskCreate' makes integer from pointer without a cast [-Wint-conversion]
+     xTaskBTN );      /* The next to lowest priority. */
+     ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:326:20: note: expected 'UBaseType_t' {aka 'long unsigned int'} but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        UBaseType_t uxPriority,
+        ~~~~~~~~~~~~^~~~~~~~~~
+../src/rtos_task_management.c:119:2: error: too few arguments to function 'xTaskCreate'
+  xTaskCreate(
+  ^~~~~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:322:13: note: declared here
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+             ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/rtos_task_management.o] Error 1
+00:00:29 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:107:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:107:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:107:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:66:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:107:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:114:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      xTaskLED );
+      ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/rtos_task_management.c:124:22: error: expected ')' before 'xTaskBTN'
+     ( UBaseType_t ) 1    /* The next to lowest priority. */
+                      ^
+                      )
+     xTaskBTN);
+     ~~~~~~~~          
+../src/rtos_task_management.c:119:2: error: too few arguments to function 'xTaskCreate'
+  xTaskCreate(
+  ^~~~~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:322:13: note: declared here
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+             ^~~~~~~~~~~
+At top level:
+../src/rtos_task_management.c:99:21: warning: 'xTaskBTN' defined but not used [-Wunused-variable]
+ static TaskHandle_t xTaskBTN;
+                     ^~~~~~~~
+make: *** [src/subdir.mk:23: src/rtos_task_management.o] Error 1
+00:01:05 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:107:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:107:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:107:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:66:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:107:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:114:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      xTaskLED );
+      ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/rtos_task_management.c:124:22: error: expected ')' before 'xTaskBTN'
+     ( UBaseType_t ) 1    /* The next to lowest priority. */
+                      ^
+                      )
+     xTaskBTN );
+     ~~~~~~~~          
+../src/rtos_task_management.c:119:2: error: too few arguments to function 'xTaskCreate'
+  xTaskCreate(
+  ^~~~~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:322:13: note: declared here
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+             ^~~~~~~~~~~
+At top level:
+../src/rtos_task_management.c:99:21: warning: 'xTaskBTN' defined but not used [-Wunused-variable]
+ static TaskHandle_t xTaskBTN;
+                     ^~~~~~~~
+make: *** [src/subdir.mk:23: src/rtos_task_management.o] Error 1
+00:01:34 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:107:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:107:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:107:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:66:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:107:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:114:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      xTaskLED );
+      ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/rtos_task_management.c:125:5: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+     xTaskBTN );
+     ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82580	   3404	  89456	 175440	  2ad50	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+00:04:12 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:04:57 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:07:24 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:107:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:107:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:107:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:66:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:107:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:114:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      xTaskLED );
+      ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/rtos_task_management.c:125:5: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+     xTaskBTN );
+     ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82580	   3404	  89456	 175440	  2ad50	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+00:10:50 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:107:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:107:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:107:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:66:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:107:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:114:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      xTaskLED );
+      ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/rtos_task_management.c:125:5: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+     xTaskBTN );
+     ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82580	   3404	  89456	 175440	  2ad50	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+00:11:27 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:12:20 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:107:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:107:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:107:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:66:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:107:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:114:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      xTaskLED );
+      ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/rtos_task_management.c:125:5: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+     xTaskBTN );
+     ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82516	   3404	  89456	 175376	  2ad10	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+00:15:18 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:21:52 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:108:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:108:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:108:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:66:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:108:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:115:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      xTaskLED );
+      ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/rtos_task_management.c:126:5: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+     xTaskBTN );
+     ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82644	   3404	  89456	 175504	  2ad90	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+00:23:20 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:108:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:108:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:108:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:66:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:108:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:115:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      xTaskLED );
+      ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/rtos_task_management.c:126:5: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+     xTaskBTN );
+     ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82644	   3404	  89456	 175504	  2ad90	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+00:23:54 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:24:27 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:108:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:108:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:108:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:66:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:108:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:115:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      xTaskLED );
+      ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/rtos_task_management.c:126:5: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+     xTaskBTN );
+     ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82644	   3404	  89456	 175504	  2ad90	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+00:24:45 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:25:40 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:108:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:108:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:108:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:66:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:108:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:115:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      xTaskLED );
+      ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/rtos_task_management.c:126:5: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+     xTaskBTN );
+     ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82644	   3404	  89456	 175504	  2ad90	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+00:26:32 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:108:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:108:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:108:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:66:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:108:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:115:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      xTaskLED );
+      ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/rtos_task_management.c:126:5: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+     xTaskBTN );
+     ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82644	   3404	  89456	 175504	  2ad90	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+00:26:49 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:28:04 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:108:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:108:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:108:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:66:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:108:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:115:6: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+      xTaskLED );
+      ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/rtos_task_management.c:126:5: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+     xTaskBTN );
+     ^~~~~~~~
+In file included from ../src/rtos_task_management.c:58:
+../../rtos_task_management_bsp/ps7_cortexa9_0/include/task.h:327:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82644	   3404	  89456	 175504	  2ad90	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+00:28:22 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:32:39 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:108:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:108:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:108:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:66:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:108:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82644	   3404	  89456	 175504	  2ad90	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+00:34:06 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:34:49 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:35:05 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:108:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:108:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:108:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:66:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:108:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82644	   3404	  89456	 175504	  2ad90	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+00:35:18 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:36:00 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:108:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:108:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:108:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:66:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:108:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82644	   3404	  89456	 175504	  2ad90	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+00:36:14 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:36:54 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:38:39 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+../src/rtos_task_management.c: In function 'main':
+../src/rtos_task_management.c:111:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+../src/rtos_task_management.c:111:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/rtos_task_management.c:111:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/rtos_task_management.c:69:1:
++#include <stdio.h>
+ //#define printf xil_printf
+../src/rtos_task_management.c:111:2:
+  printf( "Starting TaskLED. . .\r\n" );
+  ^~~~~~
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82644	   3404	  89456	 175504	  2ad90	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+00:38:53 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:39:27 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

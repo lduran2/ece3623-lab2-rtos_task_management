@@ -26,6 +26,35 @@
 
     1 tab == 4 spaces!
 */
+/*
+ * rtos_task_management.c
+ *
+ * Created on: 	15 September 2020 (based on FreeRTOS_Hello_World.c)
+ *     Author: 	Leomar Duran
+ *    Version: 	1.2
+ */
+
+/********************************************************************************************
+* VERSION HISTORY
+********************************************************************************************
+* 	v1.2 - 16 September 2020
+* 		Added TaskBTN feature that controls TaskLED.
+*
+* 	v1.1 - 15 September 2020
+* 		Set up LED counter.
+*
+* 	v1.0 - 2017
+* 		Started with FreeRTOS_Hello_World.c
+*
+*******************************************************************************************/
+
+/********************************************************************************************
+* TASK DESCRIPTION
+********************************************************************************************
+* TaskLED := a counter from 0 to 15, then looping back to 0 that is displayed in the LEDs.
+*
+* TaskBTN := reads the buttons to control the other tasks
+*******************************************************************************************/
 
 /* FreeRTOS includes. */
 #include "FreeRTOS.h"
@@ -35,79 +64,88 @@
 /* Xilinx includes. */
 #include "xil_printf.h"
 #include "xparameters.h"
+#include "xgpio.h"
+#include "xstatus.h"
+//#define	printf	xil_printf
 
-#define TIMER_ID	1
-#define DELAY_10_SECONDS	10000UL
-#define DELAY_1_SECOND		1000UL
-#define TIMER_CHECK_THRESHOLD	9
+/* GPIO definitions */
+#define  IN_DEVICE_ID	XPAR_AXI_GPIO_0_DEVICE_ID	/* GPIO device for input */
+#define OUT_DEVICE_ID	XPAR_AXI_GPIO_1_DEVICE_ID	/* GPIO device that LEDs are connected to */
+#define LED 0b0000									/* Initial LED value - 0000 */
+#define BTN_DELAY	250UL							/* button delay length for debounce */
+#define LED_DELAY	500UL							/* LED delay length for visualization */
+#define BTN_CHANNEL	1								/* GPIO port for buttons */
+#define  SW_CHANNEL	2								/* GPIO port for switches */
+#define LED_CHANNEL	1								/* GPIO port for LEDs */
+
+/* GPIO instances */
+XGpio BTNInst;									/* GPIO Device driver instance for buttons */
+XGpio  SWInst;									/* GPIO Device driver instance for switches */
+XGpio LEDInst;									/* GPIO Device driver instance for LEDs */
+
+/* bit masks */
+#define	BTN01	0b0001
+#define	BTN2	0b0100
+#define	BTN3	0b1000
+#define	 SW0	0b0001
+#define	 SW1	0b0010
+#define	 SW2	0b0100
+#define	 SW3	0b1000
 /*-----------------------------------------------------------*/
 
-/* The Tx and Rx tasks as described at the top of this file. */
-static void prvTxTask( void *pvParameters );
-static void prvRxTask( void *pvParameters );
-static void vTimerCallback( TimerHandle_t pxTimer );
+/* The tasks as described at the top of this file. */
+static void prvTaskLED( void *pvParameters );
+static void prvTaskBTN( void *pvParameters );
 /*-----------------------------------------------------------*/
 
-/* The queue used by the Tx and Rx tasks, as described at the top of this
-file. */
-static TaskHandle_t xTxTask;
-static TaskHandle_t xRxTask;
-static QueueHandle_t xQueue = NULL;
-static TimerHandle_t xTimer = NULL;
-char HWstring[15] = "Hello World";
-long RxtaskCntr = 0;
+/* The task handles to control other tasks. */
+static TaskHandle_t xTaskLED;
+static TaskHandle_t xTaskBTN;
+/* The LED Counter. */
+long LEDCntr = LED;
 
 int main( void )
 {
-	const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+	int Status;
 
-	xil_printf( "Hello from Freertos example main\r\n" );
-
-	/* Create the two tasks.  The Tx task is given a lower priority than the
-	Rx task, so the Rx task will leave the Blocked state and pre-empt the Tx
-	task as soon as the Tx task places an item in the queue. */
-	xTaskCreate( 	prvTxTask, 					/* The function that implements the task. */
-					( const char * ) "Tx", 		/* Text name for the task, provided to assist debugging only. */
+	printf( "Starting TaskLED. . .\r\n" );
+	/* Create TaskLED with priority 1. */
+	xTaskCreate( 	prvTaskLED, 				/* The function that implements the task. */
+			( const char * ) "TaskLED", 		/* Text name for the task, provided to assist debugging only. */
 					configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
 					NULL, 						/* The task parameter is not used, so set to NULL. */
-					tskIDLE_PRIORITY,			/* The task runs at the idle priority. */
-					&xTxTask );
+					( UBaseType_t ) 1,			/* The next to lowest priority. */
+					&xTaskLED );
+	printf( "\tSuccessful\r\n" );
 
-	xTaskCreate( prvRxTask,
-				 ( const char * ) "GB",
-				 configMINIMAL_STACK_SIZE,
-				 NULL,
-				 tskIDLE_PRIORITY + 1,
-				 &xRxTask );
+	printf( "Starting TaskBTN. . .\r\n" );
+	/* Create TaskBTN with priority 1. */
+	xTaskCreate(
+				prvTaskBTN,						/* The function implementing the task. */
+			( const char * ) "TaskBTN",			/* Text name provided for debugging. */
+				configMINIMAL_STACK_SIZE,		/* Not much need for a stack. */
+				NULL,							/* The task parameter, not in use. */
+				( UBaseType_t ) 1,				/* The next to lowest priority. */
+				&xTaskBTN );
+	printf( "\tSuccessful\r\n" );
 
-	/* Create the queue used by the tasks.  The Rx task has a higher priority
-	than the Tx task, so will preempt the Tx task and remove values from the
-	queue as soon as the Tx task writes to the queue - therefore the queue can
-	never have more than one item in it. */
-	xQueue = xQueueCreate( 	1,						/* There is only one space in the queue. */
-							sizeof( HWstring ) );	/* Each space in the queue is large enough to hold a uint32_t. */
+	/* initialize the GPIO driver for the LEDs */
+	Status = XGpio_Initialize(&LEDInst, OUT_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		printf("GPIO output to the LEDs failed!\r\n");
+		return 0;
+	}
+	/* set LEDs to output */
+	XGpio_SetDataDirection(&LEDInst, LED_CHANNEL, 0x00);
 
-	/* Check the queue was created. */
-	configASSERT( xQueue );
-
-	/* Create a timer with a timer expiry of 10 seconds. The timer would expire
-	 after 10 seconds and the timer call back would get called. In the timer call back
-	 checks are done to ensure that the tasks have been running properly till then.
-	 The tasks are deleted in the timer call back and a message is printed to convey that
-	 the example has run successfully.
-	 The timer expiry is set to 10 seconds and the timer set to not auto reload. */
-	xTimer = xTimerCreate( (const char *) "Timer",
-							x10seconds,
-							pdFALSE,
-							(void *) TIMER_ID,
-							vTimerCallback);
-	/* Check the timer was created. */
-	configASSERT( xTimer );
-
-	/* start the timer with a block time of 0 ticks. This means as soon
-	   as the schedule starts the timer will start running and will expire after
-	   10 seconds */
-	xTimerStart( xTimer, 0 );
+	/* initialize the GPIO driver for the buttons */
+	Status = XGpio_Initialize(&BTNInst,  IN_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		printf("GPIO input to the buttons failed!\r\n");
+		return 0;
+	}
+	/* set buttons to input */
+	XGpio_SetDataDirection(&BTNInst, BTN_CHANNEL, 0xFF);
 
 	/* Start the tasks and timer running. */
 	vTaskStartScheduler();
@@ -122,65 +160,55 @@ int main( void )
 
 
 /*-----------------------------------------------------------*/
-static void prvTxTask( void *pvParameters )
+static void prvTaskLED( void *pvParameters )
 {
-const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+const TickType_t LEDseconds = pdMS_TO_TICKS( LED_DELAY );
 
 	for( ;; )
 	{
-		/* Delay for 1 second. */
-		vTaskDelay( x1second );
+		/* display the counter */
+		XGpio_DiscreteWrite(&LEDInst, LED_CHANNEL, LEDCntr);
 
-		/* Send the next value on the queue.  The queue should always be
-		empty at this point so a block time of 0 is used. */
-		xQueueSend( xQueue,			/* The queue being written to. */
-					HWstring, /* The address of the data being sent. */
-					0UL );			/* The block time. */
+		/* Delay for visualization. */
+		vTaskDelay( LEDseconds );
+
+		/* update the counter */
+		++LEDCntr;
 	}
 }
 
-/*-----------------------------------------------------------*/
-static void prvRxTask( void *pvParameters )
-{
-char Recdstring[15] = "";
 
+/*-----------------------------------------------------------*/
+static void prvTaskBTN( void *pvParameters )
+{
+const TickType_t BTNseconds = pdMS_TO_TICKS( BTN_DELAY );
+	int btn;	/* Hold the current button value. */
 	for( ;; )
 	{
-		/* Block to wait for data arriving on the queue. */
-		xQueueReceive( 	xQueue,				/* The queue being read. */
-						Recdstring,	/* Data is read into this address. */
-						portMAX_DELAY );	/* Wait without a timeout for data. */
+		/* Read input from the buttons. */
+		btn = XGpio_DiscreteRead(&BTNInst, BTN_CHANNEL);
 
-		/* Print the received data. */
-		xil_printf( "Rx task received string from Tx task: %s\r\n", Recdstring );
-		RxtaskCntr++;
+		/* If BTN2 is depressed, regardless of the status of
+		 * BTN0 and BTN1, then TaskLED is resumed.  So BTN2
+		 * gets priority. */
+		if ( ( btn & BTN2 ) == BTN2 ) {
+			/* delay until the end of the bounce */
+			vTaskDelay(BTNseconds);
+			/* check again before acting */
+			if ( ( btn & BTN2 ) == BTN2 ) {
+				vTaskResume(xTaskLED);
+			}
+		}
+		/* Otherwise if BTN0 and BTN1 are depressed at some
+		 * point together then TaskLED is suspended */
+		else if ( (btn & BTN01 ) == BTN01 ){
+			/* delay until the end of the bounce */
+			vTaskDelay(BTNseconds);
+			/* check again before acting */
+			if ( ( btn & BTN01 ) == BTN01 ) {
+				vTaskSuspend(xTaskLED);
+			}
+		}
+		//XGpio_DiscreteWrite(&LEDInst, LED_CHANNEL, btn);
 	}
 }
-
-/*-----------------------------------------------------------*/
-static void vTimerCallback( TimerHandle_t pxTimer )
-{
-	long lTimerId;
-	configASSERT( pxTimer );
-
-	lTimerId = ( long ) pvTimerGetTimerID( pxTimer );
-
-	if (lTimerId != TIMER_ID) {
-		xil_printf("FreeRTOS Hello World Example FAILED");
-	}
-
-	/* If the RxtaskCntr is updated every time the Rx task is called. The
-	 Rx task is called every time the Tx task sends a message. The Tx task
-	 sends a message every 1 second.
-	 The timer expires after 10 seconds. We expect the RxtaskCntr to at least
-	 have a value of 9 (TIMER_CHECK_THRESHOLD) when the timer expires. */
-	if (RxtaskCntr >= TIMER_CHECK_THRESHOLD) {
-		xil_printf("FreeRTOS Hello World Example PASSED");
-	} else {
-		xil_printf("FreeRTOS Hello World Example FAILED");
-	}
-
-	vTaskDelete( xRxTask );
-	vTaskDelete( xTxTask );
-}
-

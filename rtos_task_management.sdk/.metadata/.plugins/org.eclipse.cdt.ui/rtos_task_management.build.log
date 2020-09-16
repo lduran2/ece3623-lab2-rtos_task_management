@@ -1,8 +1,8 @@
-19:48:31 **** Incremental Build of configuration Debug for project rtos_task_management ****
+00:39:27 **** Incremental Build of configuration Debug for project rtos_task_management ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
 
-19:48:31 Build Finished (took 491ms)
+00:39:27 Build Finished (took 471ms)
 
