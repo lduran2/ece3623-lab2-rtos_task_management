@@ -31,14 +31,17 @@
  *
  * Created on: 	15 September 2020 (based on FreeRTOS_Hello_World.c)
  *     Author: 	Leomar Duran
- *    Version: 	1.3
+ *    Version: 	1.4
  */
 
 /********************************************************************************************
 * VERSION HISTORY
 ********************************************************************************************
+* 	v1.4 - 16 September 2020
+* 		Added TaskSW  feature that controls TaskLED and TaskBTN.
+*
 * 	v1.3 - 16 September 2020
-* 		Added stub for TaskSW.  Optimized TaskBTN.
+* 		Stubbed TaskSW.  Optimized TaskBTN.
 *
 * 	v1.2 - 16 September 2020
 * 		Added TaskBTN feature that controls TaskLED.
@@ -77,7 +80,7 @@
 /* task definitions */
 #define	DO_TASK_LED	1								/* whether to do TaskLED */
 #define	DO_TASK_BTN	1								/* whether to do TaskBTN */
-#define	DO_TASK_SW 	0								/* whether to do TaskSW */
+#define	DO_TASK_SW 	1								/* whether to do TaskSW */
 
 /* GPIO definitions */
 #define  IN_DEVICE_ID	XPAR_AXI_GPIO_0_DEVICE_ID	/* GPIO device for input */
@@ -186,6 +189,8 @@ int main( void )
 	}
 	/* set buttons to input */
 	XGpio_SetDataDirection( &InInst, BTN_CHANNEL, 0xFF);
+	/* set switches to input */
+	XGpio_SetDataDirection( &InInst,  SW_CHANNEL, 0xFF);
 
 	/* Start the tasks and timer running. */
 	vTaskStartScheduler();
@@ -246,6 +251,7 @@ const TickType_t BTNseconds = pdMS_TO_TICKS( BTN_DELAY );
 				if ( ( btn | BTN2_ON ) == ON4 ) {
 					vTaskResume(xTaskLED);
 					printf("TaskLED is resumed.");
+					ledCntr = 8;
 				}
 				/* Otherwise if BTN0 and BTN1 are depressed at
 				 * some point together then TaskLED is
@@ -253,7 +259,9 @@ const TickType_t BTNseconds = pdMS_TO_TICKS( BTN_DELAY );
 				else if ( ( btn | BTN10_ON ) == ON4 ) {
 					vTaskSuspend(xTaskLED);
 					printf("TaskLED is suspended.");
+					ledCntr = 0;
 				}
+
 			} /* end if ( btn == nextBtn ) check if button is consistent */
 		} /* end if ( btn != nextBtn ) check if button has changed since last call */
 	} /* end for( ;; ) */
@@ -263,4 +271,32 @@ const TickType_t BTNseconds = pdMS_TO_TICKS( BTN_DELAY );
 /*-----------------------------------------------------------*/
 static void prvTaskSW( void *pvParameters )
 {
+	int sw;	/* Hold the current switch value. */
+	for( ;; )
+	{
+		/* Read input from the switches. */
+		sw = XGpio_DiscreteRead(&InInst,  SW_CHANNEL);
+
+		/* If SW0 and SW1 are ON together at some point then
+		 * TaskBTN is suspended */
+		if ( ( sw | SW10_ON ) == ON4 ) {
+			vTaskSuspend(xTaskBTN);
+		}
+		/* Switches 0 and 1 cannot both be off if they're both on. */
+		/* If SW0 and SW1 are OFF then TaskBTN is resumed. */
+		else if ( (sw & SW10_OFF ) == OFF4 ) {
+			vTaskResume(xTaskBTN);
+		}
+
+		/* This logic below is independent from those above. */
+		/* If SW3 is ON then TaskLED is suspended. */
+		if ( ( sw | SW3_ON ) == ON4 ) {
+			vTaskSuspend(xTaskLED);
+			/* If SW3 is then turned OFF, then resume TaskLED. */
+			sw = XGpio_DiscreteRead(&InInst,  SW_CHANNEL);
+			if ( ( sw & SW3_OFF ) == OFF4 ) {
+				vTaskResume(xTaskLED);
+			}
+		}
+	}
 }
