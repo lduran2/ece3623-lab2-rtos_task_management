@@ -31,12 +31,15 @@
  *
  * Created on: 	15 September 2020 (based on FreeRTOS_Hello_World.c)
  *     Author: 	Leomar Duran
- *    Version: 	1.4
+ *    Version: 	1.5
  */
 
 /********************************************************************************************
 * VERSION HISTORY
 ********************************************************************************************
+* 	v1.5 - 16 September 2020
+* 		Added TaskBTN feature that controls TaskSW.
+*
 * 	v1.4 - 16 September 2020
 * 		Added TaskSW  feature that controls TaskLED and TaskBTN.
 *
@@ -213,7 +216,7 @@ const TickType_t LEDseconds = pdMS_TO_TICKS( LED_DELAY );
 	{
 		/* display the counter */
 		XGpio_DiscreteWrite(&OutInst, LED_CHANNEL, ledCntr);
-		printf("count: %d\r\n", ledCntr);
+		printf("TaskLED: count := %d\r\n", ledCntr);
 
 		/* Delay for visualization. */
 		vTaskDelay( LEDseconds );
@@ -242,7 +245,7 @@ const TickType_t BTNseconds = pdMS_TO_TICKS( BTN_DELAY );
 			nextBtn = XGpio_DiscreteRead( &InInst, BTN_CHANNEL );	/* read again */
 			/* if the button value is still the same, continue */
 			if ( btn == nextBtn ) {
-				printf("Button changed to %x:", btn);
+				printf("TaskBTN: Button changed to 0x%x:", btn);
 
 				btn = nextBtn;	/* update btn */
 				/* If BTN2 is depressed, regardless of the
@@ -250,16 +253,27 @@ const TickType_t BTNseconds = pdMS_TO_TICKS( BTN_DELAY );
 				 * resumed.  So BTN2 gets priority. */
 				if ( ( btn | BTN2_ON ) == ON4 ) {
 					vTaskResume(xTaskLED);
-					printf("TaskLED is resumed.");
-					ledCntr = 8;
+					printf("TaskBTN: TaskLED is resumed.");
 				}
 				/* Otherwise if BTN0 and BTN1 are depressed at
 				 * some point together then TaskLED is
 				 * suspended */
 				else if ( ( btn | BTN10_ON ) == ON4 ) {
 					vTaskSuspend(xTaskLED);
-					printf("TaskLED is suspended.");
-					ledCntr = 0;
+					printf("TaskBTN: TaskLED is suspended.");
+				}
+
+				/* This logic below is independent from those above. */
+				/* If BTN3 is depressed then TaskSW is suspended */
+				if ( ( btn | BTN3_ON ) == ON4 ) {
+					vTaskSuspend(xTaskSW);
+					printf("TaskBTN: TaskSW  is suspended.");
+				}
+				/* Either BTN3 is depressed or it is released. */
+				/* If BTN3 is released then TaskSW is resumed */
+				else {
+					vTaskResume(xTaskSW);
+					printf("TaskBTN: TaskSW  is resumed.");
 				}
 
 			} /* end if ( btn == nextBtn ) check if button is consistent */
@@ -296,6 +310,7 @@ static void prvTaskSW( void *pvParameters )
 			sw = XGpio_DiscreteRead(&InInst,  SW_CHANNEL);
 			if ( ( sw & SW3_OFF ) == OFF4 ) {
 				vTaskResume(xTaskLED);
+				printf("TaskSW : TaskLED is resumed.");
 			}
 		}
 	}
