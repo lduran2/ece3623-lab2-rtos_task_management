@@ -2976,3 +2976,595 @@ con
 ----------------End of Script----------------
 
 21:11:35 INFO  : Launch script is exported to file 'C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_rtos_task_management.elf_on_local.tcl'
+23:07:41 INFO  : Disconnected from the channel tcfchan#17.
+23:07:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+23:07:43 INFO  : 'fpga -state' command is executed.
+23:07:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:07:49 INFO  : Jtag cable 'Digilent Zybo 210279759083A' is selected.
+23:07:49 INFO  : 'jtag frequency' command is executed.
+23:07:49 INFO  : Sourcing of 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:07:49 INFO  : Context for 'APU' is selected.
+23:07:52 INFO  : Hardware design information is loaded from 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf'.
+23:07:52 INFO  : 'configparams force-mem-access 1' command is executed.
+23:07:52 INFO  : Context for 'APU' is selected.
+23:07:52 INFO  : 'stop' command is executed.
+23:07:53 INFO  : 'ps7_init' command is executed.
+23:07:53 INFO  : 'ps7_post_config' command is executed.
+23:07:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:07:53 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:07:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:07:54 INFO  : The application 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:07:54 INFO  : 'configparams force-mem-access 0' command is executed.
+23:07:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+loadhw -hw C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+dow C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:07:54 INFO  : Memory regions updated for context APU
+23:07:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:07:54 INFO  : 'con' command is executed.
+23:07:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+con
+----------------End of Script----------------
+
+23:07:54 INFO  : Launch script is exported to file 'C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_rtos_task_management.elf_on_local.tcl'
+23:08:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:08:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+23:08:06 INFO  : FPGA configured successfully with bitstream "C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/zynq_dualchannel_system_wrapper.bit"
+23:08:13 INFO  : Disconnected from the channel tcfchan#18.
+23:08:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+23:08:14 INFO  : 'fpga -state' command is executed.
+23:08:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:08:14 INFO  : Jtag cable 'Digilent Zybo 210279759083A' is selected.
+23:08:14 INFO  : 'jtag frequency' command is executed.
+23:08:14 INFO  : Sourcing of 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:08:14 INFO  : Context for 'APU' is selected.
+23:08:17 INFO  : Hardware design information is loaded from 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf'.
+23:08:17 INFO  : 'configparams force-mem-access 1' command is executed.
+23:08:17 INFO  : Context for 'APU' is selected.
+23:08:17 INFO  : 'stop' command is executed.
+23:08:19 INFO  : 'ps7_init' command is executed.
+23:08:19 INFO  : 'ps7_post_config' command is executed.
+23:08:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:08:19 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:08:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:08:19 INFO  : The application 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:08:19 INFO  : 'configparams force-mem-access 0' command is executed.
+23:08:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+loadhw -hw C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+dow C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:08:19 INFO  : Memory regions updated for context APU
+23:08:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:08:19 INFO  : 'con' command is executed.
+23:08:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+con
+----------------End of Script----------------
+
+23:08:20 INFO  : Launch script is exported to file 'C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_rtos_task_management.elf_on_local.tcl'
+23:24:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:24:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+23:24:39 INFO  : FPGA configured successfully with bitstream "C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/zynq_dualchannel_system_wrapper.bit"
+23:24:51 INFO  : Disconnected from the channel tcfchan#19.
+23:24:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+23:24:52 INFO  : 'fpga -state' command is executed.
+23:24:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:24:52 INFO  : Jtag cable 'Digilent Zybo 210279759083A' is selected.
+23:24:52 INFO  : 'jtag frequency' command is executed.
+23:24:52 INFO  : Sourcing of 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:24:52 INFO  : Context for 'APU' is selected.
+23:24:54 INFO  : Hardware design information is loaded from 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf'.
+23:24:54 INFO  : 'configparams force-mem-access 1' command is executed.
+23:24:55 INFO  : Context for 'APU' is selected.
+23:24:55 INFO  : 'stop' command is executed.
+23:24:56 INFO  : 'ps7_init' command is executed.
+23:24:56 INFO  : 'ps7_post_config' command is executed.
+23:24:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:24:56 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:24:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:24:56 INFO  : The application 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:24:56 INFO  : 'configparams force-mem-access 0' command is executed.
+23:24:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+loadhw -hw C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+dow C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:24:57 INFO  : Memory regions updated for context APU
+23:24:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:24:57 INFO  : 'con' command is executed.
+23:24:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+con
+----------------End of Script----------------
+
+23:24:57 INFO  : Launch script is exported to file 'C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_rtos_task_management.elf_on_local.tcl'
+23:26:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:26:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+23:26:30 INFO  : FPGA configured successfully with bitstream "C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/zynq_dualchannel_system_wrapper.bit"
+23:26:39 INFO  : Disconnected from the channel tcfchan#20.
+23:26:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+23:26:40 INFO  : 'fpga -state' command is executed.
+23:26:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:26:41 INFO  : Jtag cable 'Digilent Zybo 210279759083A' is selected.
+23:26:41 INFO  : 'jtag frequency' command is executed.
+23:26:41 INFO  : Sourcing of 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:26:41 INFO  : Context for 'APU' is selected.
+23:26:43 INFO  : Hardware design information is loaded from 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf'.
+23:26:43 INFO  : 'configparams force-mem-access 1' command is executed.
+23:26:43 INFO  : Context for 'APU' is selected.
+23:26:43 INFO  : 'stop' command is executed.
+23:26:44 INFO  : 'ps7_init' command is executed.
+23:26:44 INFO  : 'ps7_post_config' command is executed.
+23:26:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:26:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:26:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:26:45 INFO  : The application 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:26:45 INFO  : 'configparams force-mem-access 0' command is executed.
+23:26:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+loadhw -hw C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+dow C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:26:45 INFO  : Memory regions updated for context APU
+23:26:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:26:45 INFO  : 'con' command is executed.
+23:26:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+con
+----------------End of Script----------------
+
+23:26:45 INFO  : Launch script is exported to file 'C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_rtos_task_management.elf_on_local.tcl'
+02:00:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:00:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+02:00:11 INFO  : FPGA configured successfully with bitstream "C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/zynq_dualchannel_system_wrapper.bit"
+02:00:21 INFO  : Disconnected from the channel tcfchan#21.
+02:00:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+02:00:22 INFO  : 'fpga -state' command is executed.
+02:00:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:00:22 INFO  : Jtag cable 'Digilent Zybo 210279759083A' is selected.
+02:00:22 INFO  : 'jtag frequency' command is executed.
+02:00:22 INFO  : Sourcing of 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:00:22 INFO  : Context for 'APU' is selected.
+02:00:25 INFO  : Hardware design information is loaded from 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf'.
+02:00:25 INFO  : 'configparams force-mem-access 1' command is executed.
+02:00:25 INFO  : Context for 'APU' is selected.
+02:00:25 INFO  : 'stop' command is executed.
+02:00:26 INFO  : 'ps7_init' command is executed.
+02:00:26 INFO  : 'ps7_post_config' command is executed.
+02:00:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:00:26 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:00:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:00:26 INFO  : The application 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:00:26 INFO  : 'configparams force-mem-access 0' command is executed.
+02:00:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+loadhw -hw C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+dow C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:00:26 INFO  : Memory regions updated for context APU
+02:00:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:00:27 INFO  : 'con' command is executed.
+02:00:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+con
+----------------End of Script----------------
+
+02:00:27 INFO  : Launch script is exported to file 'C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_rtos_task_management.elf_on_local.tcl'
+09:12:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:12:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+09:12:09 INFO  : FPGA configured successfully with bitstream "C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/zynq_dualchannel_system_wrapper.bit"
+09:12:21 INFO  : Disconnected from the channel tcfchan#22.
+09:12:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+09:12:22 INFO  : 'fpga -state' command is executed.
+09:12:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:12:23 INFO  : Jtag cable 'Digilent Zybo 210279759083A' is selected.
+09:12:23 INFO  : 'jtag frequency' command is executed.
+09:12:23 INFO  : Sourcing of 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+09:12:23 INFO  : Context for 'APU' is selected.
+09:12:25 INFO  : Hardware design information is loaded from 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf'.
+09:12:25 INFO  : 'configparams force-mem-access 1' command is executed.
+09:12:25 INFO  : Context for 'APU' is selected.
+09:12:25 INFO  : 'stop' command is executed.
+09:12:26 INFO  : 'ps7_init' command is executed.
+09:12:26 INFO  : 'ps7_post_config' command is executed.
+09:12:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:12:27 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+09:12:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:12:27 INFO  : The application 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:12:27 INFO  : 'configparams force-mem-access 0' command is executed.
+09:12:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+loadhw -hw C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+dow C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:12:27 INFO  : Memory regions updated for context APU
+09:12:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:12:27 INFO  : 'con' command is executed.
+09:12:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+con
+----------------End of Script----------------
+
+09:12:27 INFO  : Launch script is exported to file 'C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_rtos_task_management.elf_on_local.tcl'
+11:05:56 INFO  : Disconnected from the channel tcfchan#23.
+12:56:46 INFO  : Registering command handlers for SDK TCF services
+12:56:48 INFO  : Launching XSCT server: xsct.bat -interactive C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\temp_xsdb_launch_script.tcl
+12:56:52 INFO  : XSCT server has started successfully.
+12:56:53 INFO  : Successfully done setting XSCT server connection channel  
+12:56:53 INFO  : Successfully done setting SDK workspace  
+12:56:53 INFO  : Processing command line option -hwspec C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper.hdf.
+12:56:53 INFO  : Checking for hwspec changes in the project zynq_dualchannel_system_wrapper_hw_platform_0.
+12:57:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:57:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+12:57:33 INFO  : FPGA configured successfully with bitstream "C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/zynq_dualchannel_system_wrapper.bit"
+12:57:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+12:57:43 INFO  : 'fpga -state' command is executed.
+12:57:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:57:43 INFO  : Jtag cable 'Digilent Zybo 210279759083A' is selected.
+12:57:43 INFO  : 'jtag frequency' command is executed.
+12:57:43 INFO  : Sourcing of 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:57:43 INFO  : Context for 'APU' is selected.
+12:57:44 INFO  : Hardware design information is loaded from 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf'.
+12:57:44 INFO  : 'configparams force-mem-access 1' command is executed.
+12:57:44 INFO  : Context for 'APU' is selected.
+12:57:44 INFO  : 'stop' command is executed.
+12:57:45 INFO  : 'ps7_init' command is executed.
+12:57:45 INFO  : 'ps7_post_config' command is executed.
+12:57:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:57:46 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:57:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:57:46 INFO  : The application 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:57:46 INFO  : 'configparams force-mem-access 0' command is executed.
+12:57:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+loadhw -hw C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+dow C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:57:46 INFO  : Memory regions updated for context APU
+12:57:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:57:46 INFO  : 'con' command is executed.
+12:57:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+con
+----------------End of Script----------------
+
+12:57:46 INFO  : Launch script is exported to file 'C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_rtos_task_management.elf_on_local.tcl'
+13:44:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:44:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+13:44:58 INFO  : FPGA configured successfully with bitstream "C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/zynq_dualchannel_system_wrapper.bit"
+13:45:04 INFO  : Disconnected from the channel tcfchan#1.
+13:45:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+13:45:05 INFO  : 'fpga -state' command is executed.
+13:45:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:45:06 INFO  : Jtag cable 'Digilent Zybo 210279759083A' is selected.
+13:45:06 INFO  : 'jtag frequency' command is executed.
+13:45:06 INFO  : Sourcing of 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:45:06 INFO  : Context for 'APU' is selected.
+13:45:08 INFO  : Hardware design information is loaded from 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf'.
+13:45:08 INFO  : 'configparams force-mem-access 1' command is executed.
+13:45:08 INFO  : Context for 'APU' is selected.
+13:45:08 INFO  : 'stop' command is executed.
+13:45:10 INFO  : 'ps7_init' command is executed.
+13:45:10 INFO  : 'ps7_post_config' command is executed.
+13:45:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:45:10 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:45:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:45:10 INFO  : The application 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:45:10 INFO  : 'configparams force-mem-access 0' command is executed.
+13:45:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+loadhw -hw C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+dow C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:45:10 INFO  : Memory regions updated for context APU
+13:45:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:45:11 INFO  : 'con' command is executed.
+13:45:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+con
+----------------End of Script----------------
+
+13:45:11 INFO  : Launch script is exported to file 'C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_rtos_task_management.elf_on_local.tcl'
+13:46:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:46:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+13:46:57 INFO  : FPGA configured successfully with bitstream "C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/zynq_dualchannel_system_wrapper.bit"
+13:47:04 INFO  : Disconnected from the channel tcfchan#2.
+13:47:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+13:47:05 INFO  : 'fpga -state' command is executed.
+13:47:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:47:05 INFO  : Jtag cable 'Digilent Zybo 210279759083A' is selected.
+13:47:05 INFO  : 'jtag frequency' command is executed.
+13:47:05 INFO  : Sourcing of 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:47:05 INFO  : Context for 'APU' is selected.
+13:47:08 INFO  : Hardware design information is loaded from 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf'.
+13:47:08 INFO  : 'configparams force-mem-access 1' command is executed.
+13:47:08 INFO  : Context for 'APU' is selected.
+13:47:08 INFO  : 'stop' command is executed.
+13:47:09 INFO  : 'ps7_init' command is executed.
+13:47:09 INFO  : 'ps7_post_config' command is executed.
+13:47:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:47:10 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:47:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:47:10 INFO  : The application 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:47:10 INFO  : 'configparams force-mem-access 0' command is executed.
+13:47:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+loadhw -hw C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+dow C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:47:10 INFO  : Memory regions updated for context APU
+13:47:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:47:10 INFO  : 'con' command is executed.
+13:47:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+con
+----------------End of Script----------------
+
+13:47:10 INFO  : Launch script is exported to file 'C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_rtos_task_management.elf_on_local.tcl'
+13:47:57 INFO  : Disconnected from the channel tcfchan#3.
+13:47:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+13:47:58 INFO  : 'fpga -state' command is executed.
+13:47:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:47:59 INFO  : Jtag cable 'Digilent Zybo 210279759083A' is selected.
+13:47:59 INFO  : 'jtag frequency' command is executed.
+13:47:59 INFO  : Sourcing of 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:47:59 INFO  : Context for 'APU' is selected.
+13:48:02 INFO  : Hardware design information is loaded from 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf'.
+13:48:02 INFO  : 'configparams force-mem-access 1' command is executed.
+13:48:02 INFO  : Context for 'APU' is selected.
+13:48:02 INFO  : 'stop' command is executed.
+13:48:03 INFO  : 'ps7_init' command is executed.
+13:48:03 INFO  : 'ps7_post_config' command is executed.
+13:48:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:48:03 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:48:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:48:04 INFO  : The application 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:48:04 INFO  : 'configparams force-mem-access 0' command is executed.
+13:48:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+loadhw -hw C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+dow C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:48:04 INFO  : Memory regions updated for context APU
+13:48:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:48:04 INFO  : 'con' command is executed.
+13:48:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+con
+----------------End of Script----------------
+
+13:48:04 INFO  : Launch script is exported to file 'C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_rtos_task_management.elf_on_local.tcl'
+14:31:09 INFO  : Disconnected from the channel tcfchan#4.
+21:27:24 INFO  : Registering command handlers for SDK TCF services
+21:27:25 INFO  : Launching XSCT server: xsct.bat -interactive C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\temp_xsdb_launch_script.tcl
+21:27:29 INFO  : XSCT server has started successfully.
+21:27:30 INFO  : Successfully done setting XSCT server connection channel  
+21:27:30 INFO  : Successfully done setting SDK workspace  
+21:27:30 INFO  : Processing command line option -hwspec C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper.hdf.
+21:27:30 INFO  : Checking for hwspec changes in the project zynq_dualchannel_system_wrapper_hw_platform_0.
+21:27:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:27:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+21:27:47 INFO  : FPGA configured successfully with bitstream "C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/zynq_dualchannel_system_wrapper.bit"
+21:27:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+21:27:54 INFO  : 'fpga -state' command is executed.
+21:27:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:27:54 INFO  : Jtag cable 'Digilent Zybo 210279759083A' is selected.
+21:27:54 INFO  : 'jtag frequency' command is executed.
+21:27:54 INFO  : Sourcing of 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:27:54 INFO  : Context for 'APU' is selected.
+21:27:54 INFO  : Hardware design information is loaded from 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf'.
+21:27:54 INFO  : 'configparams force-mem-access 1' command is executed.
+21:27:54 INFO  : Context for 'APU' is selected.
+21:27:54 INFO  : 'stop' command is executed.
+21:27:56 INFO  : 'ps7_init' command is executed.
+21:27:56 INFO  : 'ps7_post_config' command is executed.
+21:27:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:27:56 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:27:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:27:56 INFO  : The application 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:27:56 INFO  : 'configparams force-mem-access 0' command is executed.
+21:27:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+loadhw -hw C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+dow C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:27:57 INFO  : Memory regions updated for context APU
+21:27:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:27:57 INFO  : 'con' command is executed.
+21:27:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+con
+----------------End of Script----------------
+
+21:27:57 INFO  : Launch script is exported to file 'C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_rtos_task_management.elf_on_local.tcl'
+13:02:36 INFO  : Disconnected from the channel tcfchan#1.
+22:58:49 INFO  : Registering command handlers for SDK TCF services
+22:58:50 INFO  : Launching XSCT server: xsct.bat -interactive C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\temp_xsdb_launch_script.tcl
+22:58:55 INFO  : XSCT server has started successfully.
+22:58:55 INFO  : Successfully done setting XSCT server connection channel  
+22:58:55 INFO  : Successfully done setting SDK workspace  
+22:58:55 INFO  : Processing command line option -hwspec C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper.hdf.
+22:58:56 INFO  : Checking for hwspec changes in the project zynq_dualchannel_system_wrapper_hw_platform_0.
+22:59:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:59:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+22:59:25 INFO  : FPGA configured successfully with bitstream "C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/zynq_dualchannel_system_wrapper.bit"
+22:59:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759083A" && level==0} -index 1' command is executed.
+22:59:39 INFO  : 'fpga -state' command is executed.
+22:59:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:59:40 INFO  : Jtag cable 'Digilent Zybo 210279759083A' is selected.
+22:59:40 INFO  : 'jtag frequency' command is executed.
+22:59:40 INFO  : Sourcing of 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:59:40 INFO  : Context for 'APU' is selected.
+22:59:40 INFO  : Hardware design information is loaded from 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf'.
+22:59:40 INFO  : 'configparams force-mem-access 1' command is executed.
+22:59:40 INFO  : Context for 'APU' is selected.
+22:59:40 INFO  : 'stop' command is executed.
+22:59:41 INFO  : 'ps7_init' command is executed.
+22:59:41 INFO  : 'ps7_post_config' command is executed.
+22:59:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:59:41 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:59:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:59:41 INFO  : The application 'C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:59:41 INFO  : 'configparams force-mem-access 0' command is executed.
+22:59:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+loadhw -hw C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/zynq_dualchannel_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+dow C:/Zynq_Book/rtos_task_management/rtos_task_management.sdk/rtos_task_management/Debug/rtos_task_management.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:59:42 INFO  : Memory regions updated for context APU
+22:59:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:59:42 INFO  : 'con' command is executed.
+22:59:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759083A"} -index 0
+con
+----------------End of Script----------------
+
+22:59:42 INFO  : Launch script is exported to file 'C:\Zynq_Book\rtos_task_management\rtos_task_management.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_rtos_task_management.elf_on_local.tcl'
+23:00:23 INFO  : Disconnected from the channel tcfchan#1.

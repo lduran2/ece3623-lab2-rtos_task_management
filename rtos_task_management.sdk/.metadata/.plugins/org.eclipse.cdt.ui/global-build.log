@@ -2438,3 +2438,138 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
+23:07:38 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:08:10 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:24:20 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79444	   3400	  89456	 172300	  2a10c	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+23:24:44 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:26:34 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79508	   3400	  89456	 172364	  2a14c	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+23:28:53 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79444	   3400	  89456	 172300	  2a10c	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+02:00:16 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+09:12:17 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:57:41 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:45:01 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:46:53 **** Auto Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/rtos_task_management.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rtos_task_management.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../rtos_task_management_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rtos_task_management.d" -MT"src/rtos_task_management.o" -o "src/rtos_task_management.o" "../src/rtos_task_management.c"
+'Finished building: ../src/rtos_task_management.c'
+' '
+'Building target: rtos_task_management.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../rtos_task_management_bsp/ps7_cortexa9_0/lib -o "rtos_task_management.elf"  ./src/rtos_task_management.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: rtos_task_management.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size rtos_task_management.elf  |tee "rtos_task_management.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79452	   3400	  89456	 172308	  2a114	rtos_task_management.elf
+'Finished building: rtos_task_management.elf.size'
+' '
+13:47:00 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:47:54 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:27:50 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:59:37 **** Incremental Build of configuration Debug for project rtos_task_management ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
