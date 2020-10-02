@@ -31,12 +31,21 @@
  *
  *  Created on:		10/01/2020
  *      Author:		Leomar Duran
- *     Version:		1.25
+ *     Version:		1.35
  */
 
 /********************************************************************************************
 * VERSION HISTORY
 ********************************************************************************************
+* 	v1.35 - 10/02/2015
+* 		Allowed button data to be zero.
+*
+* 	v1.30 - 10/02/2015
+* 		Added task TaskBTN, priority 2 task which transmits button
+* 		presses to xQueueBtnSw, whenever a new non-zero button
+* 		combination is depressed.  Debounce stops when the buttons are
+* 		released.
+*
 * 	v1.25 - 10/01/2015
 * 		Fixed TaskLED encoding to ready for TaskBTN.
 *
@@ -275,7 +284,7 @@ static void prvTaskBTN( void *pvParameters )
 		/* read in the button data */
 		nextData = XGpio_DiscreteRead(&InInst, BTN_CHANNEL);
 		/* if no change, skip this loop run */
-		if ((nextData == 0) || (nextData == data)) continue;
+		if (nextData == data) continue;
 
 		/* debounce by looping until no button pressed */
 		while (XGpio_DiscreteRead(&InInst, BTN_CHANNEL) == 0b0000) {
