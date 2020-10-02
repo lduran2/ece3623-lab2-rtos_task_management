@@ -56,6 +56,9 @@
  * Tasks:
  *   	TaskLED := priority 2, received a button value and total
  *   	current switch settings from xQueueBtnSw every 10 seconds.
+ *
+ *   	TaskBTN := priority 2, send button values when the button
+ *   	changes.
  */
 
 /* FreeRTOS includes. */
@@ -84,27 +87,31 @@ XGpio OutInst;									/* GPIO Device driver instance for output */
 #define TIMER_ID	1
 #define DELAY_10_SECONDS	10000UL
 #define DELAY_1_SECOND		1000UL
-#define	TASKLED_DELAY		10000UL
+#define	TASKLED_DELAY		10000UL	/* wait 10 seconds between LED updates*/
+#define	DEBOUNCE_DELAY		250UL	/* wait 0.250 seconds to debounce */
 #define	QUEUE_RX_BLOCK		30000UL	/* queue receiving block time, 30 s */
+#define	QUEUE_TX_BLOCK		30000UL	/* queue transmitting block time, 30 s */
 #define TIMER_CHECK_THRESHOLD	9
 #define	QUEUE_BTN_SW_LEN	10u
 
 /* input data constants */
 #define LED_INIT	0b0000
+#define BTN_INIT	0b0000
 #define	BTN_SHIFT	0
 #define BTN_MASK	0b1111
 /*-----------------------------------------------------------*/
 
-/* The Tx and Rx tasks as described at the top of this file. */
-static void prvTxTask( void *pvParameters );
+/* The TaskLED and TaskBTN tasks as described at the top of this
+ * file. */
 static void prvTaskLED( void *pvParameters );
+static void prvTaskBTN( void *pvParameters );
 static void vTimerCallback( TimerHandle_t pxTimer );
 /*-----------------------------------------------------------*/
 
-/* The queue used by the Tx and Rx tasks, as described at the top of this
-file. */
-static TaskHandle_t xTxTask;
+/* The queue used by the TaskLED and TaskBTN tasks, as described at
+ * the top of this file. */
 static TaskHandle_t xTaskLED;
+static TaskHandle_t xTaskBTN;
 static QueueHandle_t xQueueBtnSw = NULL;
 static TimerHandle_t xTimer = NULL;
 char HWdata = 0;	/* the data is encoded in a byte */
@@ -128,12 +135,12 @@ int main( void )
 					2, /* priority */			/* The task runs at the idle priority. */
 					&xTaskLED );
 
-	xTaskCreate( 	prvTxTask,
-					( const char * ) "Tx",
+	xTaskCreate( 	prvTaskBTN,
+					( const char * ) "TaskBTN",
 					configMINIMAL_STACK_SIZE,
 					NULL,
-					tskIDLE_PRIORITY,
-					&xTxTask );
+					2, /* priority */
+					&xTaskBTN );
 
 	/* Create the queue used by the tasks.  It has room for 10 items
 	 * to encode each new button depressed and new total switch
@@ -167,17 +174,26 @@ int main( void )
 	   10 seconds */
 	xTimerStart( xTimer, 0 );
 
-	/* Start the tasks and timer running. */
-	vTaskStartScheduler();
-
-	/* initialize the GPIO driver for the LEDs */
+	/* initialize the GPIO driver for output */
 	Status = XGpio_Initialize(&OutInst, OUT_DEVICE_ID);
 	if (Status != XST_SUCCESS) {
-		xil_printf("GPIO output to the LEDs failed!\r\n");
+		xil_printf("GPIO output failed!\r\n");
 		return 0;
 	}
 	/* set LEDs to output */
 	XGpio_SetDataDirection(&OutInst, LED_CHANNEL, 0x00);
+
+	/* initialize the GPIO driver for input */
+	Status = XGpio_Initialize(& InInst,  IN_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("GPIO input failed!\r\n");
+		return 0;
+	}
+	/* set buttons to input */
+	XGpio_SetDataDirection(& InInst, BTN_CHANNEL, 0xFF);
+
+	/* Start the tasks and timer running. */
+	vTaskStartScheduler();
 
 	/* If all is well, the scheduler will now be running, and the following line
 	will never be reached.  If the following line does execute, then there was
@@ -198,18 +214,23 @@ static void prvTaskLED( void *pvParameters )
 	int btnData;
 	int swcData = 0b1111; /* for now all switches as if on */
 
-	const TickType_t rxBlockSeconds = pdMS_TO_TICKS( QUEUE_RX_BLOCK );
-	const TickType_t delaySeconds = pdMS_TO_TICKS( TASKLED_DELAY );
+	const TickType_t rxBlockTicks = pdMS_TO_TICKS( QUEUE_RX_BLOCK );
+	const TickType_t delayTicks = pdMS_TO_TICKS( TASKLED_DELAY );
+
+	xil_printf("[TaskLED] started\n");
 
 	for( ;; )
 	{
 		/* Block to wait for data arriving on the queue. */
 		xQueueReceive( 	xQueueBtnSw,				/* The queue being read. */
 						&rxData,	/* Data is read into this address. */
-						rxBlockSeconds );	/* Block by the receiving block time. */
+						rxBlockTicks );	/* Block by the receiving block time. */
+
+		/* log the data received */
+		xil_printf("[TaskLED] data received:\t0x%x\n", rxData);
 
 		/* get the button and switch data */
-		btnData = (btnData >> BTN_SHIFT) & BTN_MASK;
+		btnData = ((rxData >> BTN_SHIFT) & BTN_MASK);
 
 		/* loop through the switches */
 		for (iSwc = 0b1000; iSwc; iSwc >>= 1) {
@@ -219,12 +240,12 @@ static void prvTaskLED( void *pvParameters )
 			if ((iSwc & swcData & btnData) == iSwc) {
 				/* activate the corresponding LED */
 				ledData |= iSwc;
-				xil_printf("[TaskLED] LED 0x%x on \n", iSwc);
+				xil_printf("[TaskLED] LED 0x%x\ton \n", iSwc);
 			}
 			else {
 				/* otherwise deactivate the corresponding LED */
 				ledData &= ~iSwc;
-				xil_printf("[TaskLED] LED 0x%x off\n", iSwc);
+				xil_printf("[TaskLED] LED 0x%x\toff\n", iSwc);
 			}
 		}
 
@@ -232,25 +253,50 @@ static void prvTaskLED( void *pvParameters )
 		XGpio_DiscreteWrite(&OutInst, LED_CHANNEL, ledData);
 
 		/* wait before reading again */
-		vTaskDelay( delaySeconds );
+		vTaskDelay( delayTicks );
 	}
 } /* end static void prvTaskLED( void *pvParameters ) */
 
 /*-----------------------------------------------------------*/
-static void prvTxTask( void *pvParameters )
+static void prvTaskBTN( void *pvParameters )
 {
-const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+	/* all variables local to TaskBTN */
+	int data = BTN_INIT;
+	int nextData;
+	int encodedData;
+
+	const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+	const TickType_t txBlockTicks = pdMS_TO_TICKS( QUEUE_TX_BLOCK );
+
+	xil_printf("[TaskBTN] started\n");
 
 	for( ;; )
 	{
-		/* Delay for 1 second. */
-		vTaskDelay( x1second );
+		/* read in the button data */
+		nextData = XGpio_DiscreteRead(&InInst, BTN_CHANNEL);
+		/* if no change, skip this loop run */
+		if ((nextData == 0) || (nextData == data)) continue;
+
+		/* debounce by looping until no button pressed */
+		while (XGpio_DiscreteRead(&InInst, BTN_CHANNEL) == 0b0000) {
+			/* wait in loop */
+			vTaskDelay( debounceTicks );
+		}
+
+		/* since change, update the data */
+		data = nextData;
+
+		/* log the buttons pressed */
+		xil_printf("[TaskBTN] buttons pressed:\t0x%x\n", data);
+
+		/* encode the data */
+		encodedData = ((data & BTN_MASK) << BTN_SHIFT);
 
 		/* Send the next value on the queue.  The queue should always be
 		empty at this point so a block time of 0 is used. */
 		xQueueSend( xQueueBtnSw,			/* The queue being written to. */
-					&HWdata, /* The address of the data being sent. */
-					0UL );			/* The block time. */
+					&encodedData, /* The address of the data being sent. */
+					txBlockTicks );	/* The block time. */
 	}
 }
 
@@ -277,7 +323,7 @@ static void vTimerCallback( TimerHandle_t pxTimer )
 		xil_printf("FreeRTOS Hello World Example FAILED");
 	}
 
-	//vTaskDelete( xTaskLED );
-	vTaskDelete( xTxTask );
+//	vTaskDelete( xTaskLED );
+//	vTaskDelete( xTaskBTN );
 }
 

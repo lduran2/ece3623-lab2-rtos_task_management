@@ -4523,3 +4523,1313 @@ arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
   79004	   3400	  89456	 171860	  29f54	initials_FreeRTOStm.elf
 'Finished building: initials_FreeRTOStm.elf.size'
 ' '
+23:09:59 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79004	   3400	  89456	 171860	  29f54	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:10:14 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79004	   3400	  89456	 171860	  29f54	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:11:55 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79004	   3400	  89456	 171860	  29f54	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:12:15 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79004	   3400	  89456	 171860	  29f54	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:13:01 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79004	   3400	  89456	 171860	  29f54	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:13:25 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79004	   3400	  89456	 171860	  29f54	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:13:27 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79004	   3400	  89456	 171860	  29f54	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:13:39 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79004	   3400	  89456	 171860	  29f54	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:13:59 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79004	   3400	  89456	 171860	  29f54	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:14:27 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79004	   3400	  89456	 171860	  29f54	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:21:16 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:255:3: error: 'nextBtnData' undeclared (first use in this function); did you mean 'nextbtnData'?
+   nextBtnData = XGpio_DiscreteRead(&InInst, BTN_CHANNEL);
+   ^~~~~~~~~~~
+   nextbtnData
+../src/initials_FreeRTOStm.c:255:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/initials_FreeRTOStm.c:251:19: warning: unused variable 'txBlockSeconds' [-Wunused-variable]
+  const TickType_t txBlockSeconds = pdMS_TO_TICKS( QUEUE_TX_BLOCK );
+                   ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:250:6: warning: unused variable 'nextbtnData' [-Wunused-variable]
+  int nextbtnData = BTN_INIT;
+      ^~~~~~~~~~~
+../src/initials_FreeRTOStm.c:249:6: warning: unused variable 'btnData' [-Wunused-variable]
+  int btnData = BTN_INIT;
+      ^~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+23:21:28 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:251:19: warning: unused variable 'txBlockSeconds' [-Wunused-variable]
+  const TickType_t txBlockSeconds = pdMS_TO_TICKS( QUEUE_TX_BLOCK );
+                   ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:250:6: warning: variable 'nextBtnData' set but not used [-Wunused-but-set-variable]
+  int nextBtnData = BTN_INIT;
+      ^~~~~~~~~~~
+../src/initials_FreeRTOStm.c:249:6: warning: unused variable 'btnData' [-Wunused-variable]
+  int btnData = BTN_INIT;
+      ^~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79068	   3400	  89456	 171924	  29f94	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:24:51 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:251:19: warning: unused variable 'txBlockSeconds' [-Wunused-variable]
+  const TickType_t txBlockSeconds = pdMS_TO_TICKS( QUEUE_TX_BLOCK );
+                   ^~~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79132	   3400	  89456	 171988	  29fd4	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:25:40 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:67:
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:270:7: error: 'btnData' undeclared (first use in this function)
+      &btnData, /* The address of the data being sent. */
+       ^~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:270:7: note: each undeclared identifier is reported only once for each function it appears in
+      &btnData, /* The address of the data being sent. */
+       ^~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:252:19: warning: unused variable 'txBlockSeconds' [-Wunused-variable]
+  const TickType_t txBlockSeconds = pdMS_TO_TICKS( QUEUE_TX_BLOCK );
+                   ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:251:6: warning: unused variable 'btnDataToSend' [-Wunused-variable]
+  int btnDataToSend;
+      ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+23:25:45 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:67:
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:270:7: error: 'btnData' undeclared (first use in this function); did you mean 'nextData'?
+      &btnData, /* The address of the data being sent. */
+       ^~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:270:7: note: each undeclared identifier is reported only once for each function it appears in
+      &btnData, /* The address of the data being sent. */
+       ^~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:252:19: warning: unused variable 'txBlockSeconds' [-Wunused-variable]
+  const TickType_t txBlockSeconds = pdMS_TO_TICKS( QUEUE_TX_BLOCK );
+                   ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:251:6: warning: unused variable 'btnDataToSend' [-Wunused-variable]
+  int btnDataToSend;
+      ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+23:26:04 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:67:
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:270:7: error: 'btnData' undeclared (first use in this function); did you mean 'nextData'?
+      &btnData, /* The address of the data being sent. */
+       ^~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:270:7: note: each undeclared identifier is reported only once for each function it appears in
+      &btnData, /* The address of the data being sent. */
+       ^~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:252:19: warning: unused variable 'txBlockSeconds' [-Wunused-variable]
+  const TickType_t txBlockSeconds = pdMS_TO_TICKS( QUEUE_TX_BLOCK );
+                   ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:251:6: warning: unused variable 'dataToSend' [-Wunused-variable]
+  int dataToSend;
+      ^~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+23:26:18 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:67:
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:270:7: error: 'btnData' undeclared (first use in this function); did you mean 'nextData'?
+      &btnData, /* The address of the data being sent. */
+       ^~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:270:7: note: each undeclared identifier is reported only once for each function it appears in
+      &btnData, /* The address of the data being sent. */
+       ^~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:252:19: warning: unused variable 'txBlockSeconds' [-Wunused-variable]
+  const TickType_t txBlockSeconds = pdMS_TO_TICKS( QUEUE_TX_BLOCK );
+                   ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:251:6: warning: unused variable 'encodedData' [-Wunused-variable]
+  int encodedData;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+23:26:50 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:67:
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:273:7: error: 'btnData' undeclared (first use in this function); did you mean 'nextData'?
+      &btnData, /* The address of the data being sent. */
+       ^~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:273:7: note: each undeclared identifier is reported only once for each function it appears in
+      &btnData, /* The address of the data being sent. */
+       ^~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:252:19: warning: unused variable 'txBlockSeconds' [-Wunused-variable]
+  const TickType_t txBlockSeconds = pdMS_TO_TICKS( QUEUE_TX_BLOCK );
+                   ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:251:6: warning: variable 'encodedData' set but not used [-Wunused-but-set-variable]
+  int encodedData;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+23:26:56 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:67:
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:273:7: error: 'btnData' undeclared (first use in this function); did you mean 'nextData'?
+      &btnData, /* The address of the data being sent. */
+       ^~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:273:7: note: each undeclared identifier is reported only once for each function it appears in
+      &btnData, /* The address of the data being sent. */
+       ^~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:252:19: warning: unused variable 'txBlockSeconds' [-Wunused-variable]
+  const TickType_t txBlockSeconds = pdMS_TO_TICKS( QUEUE_TX_BLOCK );
+                   ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:251:6: warning: variable 'encodedData' set but not used [-Wunused-but-set-variable]
+  int encodedData;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+23:27:08 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:252:19: warning: unused variable 'txBlockSeconds' [-Wunused-variable]
+  const TickType_t txBlockSeconds = pdMS_TO_TICKS( QUEUE_TX_BLOCK );
+                   ^~~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79132	   3400	  89456	 171988	  29fd4	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:27:23 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79132	   3400	  89456	 171988	  29fd4	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:27:30 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79132	   3400	  89456	 171988	  29fd4	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:27:32 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79132	   3400	  89456	 171988	  29fd4	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:28:13 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:32:31 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskLED':
+../src/initials_FreeRTOStm.c:218:57: error: expected ';' before 'btnData'
+   xil_printf("[TaskLED] data received:\t0x%x\n", rxData)
+                                                         ^
+                                                         ;
+../src/initials_FreeRTOStm.c:221:3:
+   btnData = ((rxData >> BTN_SHIFT) & BTN_MASK);
+   ~~~~~~~                                                
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:271:3: warning: implicit declaration of function 'xil_print'; did you mean 'xil_printf'? [-Wimplicit-function-declaration]
+   xil_print("[TaskBTN] buttons pressed:\t0x%x\n", data)
+   ^~~~~~~~~
+   xil_printf
+../src/initials_FreeRTOStm.c:271:56: error: expected ';' before 'encodedData'
+   xil_print("[TaskBTN] buttons pressed:\t0x%x\n", data)
+                                                        ^
+                                                        ;
+../src/initials_FreeRTOStm.c:274:3:
+   encodedData = ((data & BTN_MASK) << BTN_SHIFT);
+   ~~~~~~~~~~~                                           
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+23:32:37 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:271:3: warning: implicit declaration of function 'xil_print'; did you mean 'xil_printf'? [-Wimplicit-function-declaration]
+   xil_print("[TaskBTN] buttons pressed:\t0x%x\n", data)
+   ^~~~~~~~~
+   xil_printf
+../src/initials_FreeRTOStm.c:271:56: error: expected ';' before 'encodedData'
+   xil_print("[TaskBTN] buttons pressed:\t0x%x\n", data)
+                                                        ^
+                                                        ;
+../src/initials_FreeRTOStm.c:274:3:
+   encodedData = ((data & BTN_MASK) << BTN_SHIFT);
+   ~~~~~~~~~~~                                           
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+23:32:44 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:271:3: warning: implicit declaration of function 'xil_print'; did you mean 'xil_printf'? [-Wimplicit-function-declaration]
+   xil_print("[TaskBTN] buttons pressed:\t0x%x\n", data);
+   ^~~~~~~~~
+   xil_printf
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/initials_FreeRTOStm.o: in function `prvTaskBTN':
+C:\Zynq_Book\rtos_data_queue_on_zybo\rtos_task_management.sdk\initials_FreeRTOStm\Debug/../src/initials_FreeRTOStm.c:271: undefined reference to `xil_print'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: initials_FreeRTOStm.elf] Error 1
+23:33:01 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79204	   3400	  89456	 172060	  2a01c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:33:10 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:33:16 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:37:01 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79276	   3400	  89456	 172132	  2a064	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:37:13 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79276	   3400	  89456	 172132	  2a064	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:37:21 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79276	   3400	  89456	 172132	  2a064	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:37:47 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:38:09 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:40:00 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:41:05 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:44:27 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79300	   3400	  89456	 172156	  2a07c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:44:55 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79380	   3400	  89456	 172236	  2a0cc	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+23:45:15 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:39:47 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:123:19: warning: unused variable 'x10seconds' [-Wunused-variable]
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                   ^~~~~~~~~~
+At top level:
+../src/initials_FreeRTOStm.c:299:13: warning: 'vTimerCallback' defined but not used [-Wunused-function]
+ static void vTimerCallback( TimerHandle_t pxTimer )
+             ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:115:22: warning: 'xTimer' defined but not used [-Wunused-variable]
+ static TimerHandle_t xTimer = NULL;
+                      ^~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79180	   3400	  89456	 172036	  2a004	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+14:44:43 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:45:13 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:49:36 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:123:19: warning: unused variable 'x10seconds' [-Wunused-variable]
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                   ^~~~~~~~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:276:42: error: expected ')' before 'continue'
+   if ((nextData != 0 && nextData == data) continue;
+      ~                                   ^~~~~~~~~
+                                          )
+../src/initials_FreeRTOStm.c:295:2: error: expected expression before '}' token
+  }
+  ^
+../src/initials_FreeRTOStm.c:267:19: warning: unused variable 'txBlockSeconds' [-Wunused-variable]
+  const TickType_t txBlockSeconds = pdMS_TO_TICKS( QUEUE_TX_BLOCK );
+                   ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:265:6: warning: unused variable 'encodedData' [-Wunused-variable]
+  int encodedData;
+      ^~~~~~~~~~~
+At top level:
+../src/initials_FreeRTOStm.c:299:13: warning: 'vTimerCallback' defined but not used [-Wunused-function]
+ static void vTimerCallback( TimerHandle_t pxTimer )
+             ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:115:22: warning: 'xTimer' defined but not used [-Wunused-variable]
+ static TimerHandle_t xTimer = NULL;
+                      ^~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+14:49:49 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:123:19: warning: unused variable 'x10seconds' [-Wunused-variable]
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                   ^~~~~~~~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:276:42: error: expected ')' before 'continue'
+   if ((nextData == 0 || nextData == data) continue;
+      ~                                   ^~~~~~~~~
+                                          )
+../src/initials_FreeRTOStm.c:295:2: error: expected expression before '}' token
+  }
+  ^
+../src/initials_FreeRTOStm.c:267:19: warning: unused variable 'txBlockSeconds' [-Wunused-variable]
+  const TickType_t txBlockSeconds = pdMS_TO_TICKS( QUEUE_TX_BLOCK );
+                   ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:265:6: warning: unused variable 'encodedData' [-Wunused-variable]
+  int encodedData;
+      ^~~~~~~~~~~
+At top level:
+../src/initials_FreeRTOStm.c:299:13: warning: 'vTimerCallback' defined but not used [-Wunused-function]
+ static void vTimerCallback( TimerHandle_t pxTimer )
+             ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:115:22: warning: 'xTimer' defined but not used [-Wunused-variable]
+ static TimerHandle_t xTimer = NULL;
+                      ^~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+14:50:12 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:123:19: warning: unused variable 'x10seconds' [-Wunused-variable]
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                   ^~~~~~~~~~
+At top level:
+../src/initials_FreeRTOStm.c:299:13: warning: 'vTimerCallback' defined but not used [-Wunused-function]
+ static void vTimerCallback( TimerHandle_t pxTimer )
+             ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:115:22: warning: 'xTimer' defined but not used [-Wunused-variable]
+ static TimerHandle_t xTimer = NULL;
+                      ^~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79244	   3400	  89456	 172100	  2a044	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+14:50:17 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:54:30 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:55:56 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:123:19: warning: unused variable 'x10seconds' [-Wunused-variable]
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                   ^~~~~~~~~~
+At top level:
+../src/initials_FreeRTOStm.c:299:13: warning: 'vTimerCallback' defined but not used [-Wunused-function]
+ static void vTimerCallback( TimerHandle_t pxTimer )
+             ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:115:22: warning: 'xTimer' defined but not used [-Wunused-variable]
+ static TimerHandle_t xTimer = NULL;
+                      ^~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79244	   3400	  89456	 172100	  2a044	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+14:57:05 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:02:08 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c:40:10: fatal error: xtmrctr.h: No such file or directory
+ #include "xtmrctr.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+15:02:55 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c:40:10: fatal error: xtmrctr.h: No such file or directory
+ #include "xtmrctr.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+15:04:27 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79452	   3400	  89456	 172308	  2a114	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+15:05:57 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:123:19: warning: unused variable 'x10seconds' [-Wunused-variable]
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                   ^~~~~~~~~~
+At top level:
+../src/initials_FreeRTOStm.c:299:13: warning: 'vTimerCallback' defined but not used [-Wunused-function]
+ static void vTimerCallback( TimerHandle_t pxTimer )
+             ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:115:22: warning: 'xTimer' defined but not used [-Wunused-variable]
+ static TimerHandle_t xTimer = NULL;
+                      ^~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79244	   3400	  89456	 172100	  2a044	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+15:06:10 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:16:44 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/FreeRTOS.h:59,
+                 from ../src/initials_FreeRTOStm.c:65:
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:122:47: error: 'DELAY_10_SECONDS' undeclared (first use in this function)
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                                               ^~~~~~~~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/projdefs.h:41:75: note: in definition of macro 'pdMS_TO_TICKS'
+  #define pdMS_TO_TICKS( xTimeInMs ) ( ( TickType_t ) ( ( ( TickType_t ) ( xTimeInMs ) * ( TickType_t ) configTICK_RATE_HZ ) / ( TickType_t ) 1000 ) )
+                                                                           ^~~~~~~~~
+../src/initials_FreeRTOStm.c:122:47: note: each undeclared identifier is reported only once for each function it appears in
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                                               ^~~~~~~~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/projdefs.h:41:75: note: in definition of macro 'pdMS_TO_TICKS'
+  #define pdMS_TO_TICKS( xTimeInMs ) ( ( TickType_t ) ( ( ( TickType_t ) ( xTimeInMs ) * ( TickType_t ) configTICK_RATE_HZ ) / ( TickType_t ) 1000 ) )
+                                                                           ^~~~~~~~~
+../src/initials_FreeRTOStm.c:122:19: warning: unused variable 'x10seconds' [-Wunused-variable]
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                   ^~~~~~~~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:266:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+At top level:
+../src/initials_FreeRTOStm.c:299:13: warning: 'vTimerCallback' defined but not used [-Wunused-function]
+ static void vTimerCallback( TimerHandle_t pxTimer )
+             ^~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:114:22: warning: 'xTimer' defined but not used [-Wunused-variable]
+ static TimerHandle_t xTimer = NULL;
+                      ^~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+15:17:13 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/FreeRTOS.h:59,
+                 from ../src/initials_FreeRTOStm.c:65:
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:122:47: error: 'DELAY_10_SECONDS' undeclared (first use in this function)
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                                               ^~~~~~~~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/projdefs.h:41:75: note: in definition of macro 'pdMS_TO_TICKS'
+  #define pdMS_TO_TICKS( xTimeInMs ) ( ( TickType_t ) ( ( ( TickType_t ) ( xTimeInMs ) * ( TickType_t ) configTICK_RATE_HZ ) / ( TickType_t ) 1000 ) )
+                                                                           ^~~~~~~~~
+../src/initials_FreeRTOStm.c:122:47: note: each undeclared identifier is reported only once for each function it appears in
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                                               ^~~~~~~~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/projdefs.h:41:75: note: in definition of macro 'pdMS_TO_TICKS'
+  #define pdMS_TO_TICKS( xTimeInMs ) ( ( TickType_t ) ( ( ( TickType_t ) ( xTimeInMs ) * ( TickType_t ) configTICK_RATE_HZ ) / ( TickType_t ) 1000 ) )
+                                                                           ^~~~~~~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:266:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+15:17:41 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/FreeRTOS.h:59,
+                 from ../src/initials_FreeRTOStm.c:65:
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:122:47: error: 'DELAY_10_SECONDS' undeclared (first use in this function)
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                                               ^~~~~~~~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/projdefs.h:41:75: note: in definition of macro 'pdMS_TO_TICKS'
+  #define pdMS_TO_TICKS( xTimeInMs ) ( ( TickType_t ) ( ( ( TickType_t ) ( xTimeInMs ) * ( TickType_t ) configTICK_RATE_HZ ) / ( TickType_t ) 1000 ) )
+                                                                           ^~~~~~~~~
+../src/initials_FreeRTOStm.c:122:47: note: each undeclared identifier is reported only once for each function it appears in
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                                               ^~~~~~~~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/projdefs.h:41:75: note: in definition of macro 'pdMS_TO_TICKS'
+  #define pdMS_TO_TICKS( xTimeInMs ) ( ( TickType_t ) ( ( ( TickType_t ) ( xTimeInMs ) * ( TickType_t ) configTICK_RATE_HZ ) / ( TickType_t ) 1000 ) )
+                                                                           ^~~~~~~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:266:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+15:35:04 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/FreeRTOS.h:59,
+                 from ../src/initials_FreeRTOStm.c:65:
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:122:47: error: 'DELAY_10_SECONDS' undeclared (first use in this function)
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                                               ^~~~~~~~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/projdefs.h:41:75: note: in definition of macro 'pdMS_TO_TICKS'
+  #define pdMS_TO_TICKS( xTimeInMs ) ( ( TickType_t ) ( ( ( TickType_t ) ( xTimeInMs ) * ( TickType_t ) configTICK_RATE_HZ ) / ( TickType_t ) 1000 ) )
+                                                                           ^~~~~~~~~
+../src/initials_FreeRTOStm.c:122:47: note: each undeclared identifier is reported only once for each function it appears in
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                                               ^~~~~~~~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/projdefs.h:41:75: note: in definition of macro 'pdMS_TO_TICKS'
+  #define pdMS_TO_TICKS( xTimeInMs ) ( ( TickType_t ) ( ( ( TickType_t ) ( xTimeInMs ) * ( TickType_t ) configTICK_RATE_HZ ) / ( TickType_t ) 1000 ) )
+                                                                           ^~~~~~~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:266:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+15:37:03 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/FreeRTOS.h:59,
+                 from ../src/initials_FreeRTOStm.c:65:
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:122:47: error: 'DELAY_10_SECONDS' undeclared (first use in this function)
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                                               ^~~~~~~~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/projdefs.h:41:75: note: in definition of macro 'pdMS_TO_TICKS'
+  #define pdMS_TO_TICKS( xTimeInMs ) ( ( TickType_t ) ( ( ( TickType_t ) ( xTimeInMs ) * ( TickType_t ) configTICK_RATE_HZ ) / ( TickType_t ) 1000 ) )
+                                                                           ^~~~~~~~~
+../src/initials_FreeRTOStm.c:122:47: note: each undeclared identifier is reported only once for each function it appears in
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                                               ^~~~~~~~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/projdefs.h:41:75: note: in definition of macro 'pdMS_TO_TICKS'
+  #define pdMS_TO_TICKS( xTimeInMs ) ( ( TickType_t ) ( ( ( TickType_t ) ( xTimeInMs ) * ( TickType_t ) configTICK_RATE_HZ ) / ( TickType_t ) 1000 ) )
+                                                                           ^~~~~~~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskBTN':
+../src/initials_FreeRTOStm.c:281:16: error: 'debouceTicks' undeclared (first use in this function); did you mean 'debounceTicks'?
+    vTaskDelay( debouceTicks );
+                ^~~~~~~~~~~~
+                debounceTicks
+../src/initials_FreeRTOStm.c:266:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+15:37:26 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/FreeRTOS.h:59,
+                 from ../src/initials_FreeRTOStm.c:65:
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:122:47: error: 'DELAY_10_SECONDS' undeclared (first use in this function)
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                                               ^~~~~~~~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/projdefs.h:41:75: note: in definition of macro 'pdMS_TO_TICKS'
+  #define pdMS_TO_TICKS( xTimeInMs ) ( ( TickType_t ) ( ( ( TickType_t ) ( xTimeInMs ) * ( TickType_t ) configTICK_RATE_HZ ) / ( TickType_t ) 1000 ) )
+                                                                           ^~~~~~~~~
+../src/initials_FreeRTOStm.c:122:47: note: each undeclared identifier is reported only once for each function it appears in
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                                               ^~~~~~~~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/projdefs.h:41:75: note: in definition of macro 'pdMS_TO_TICKS'
+  #define pdMS_TO_TICKS( xTimeInMs ) ( ( TickType_t ) ( ( ( TickType_t ) ( xTimeInMs ) * ( TickType_t ) configTICK_RATE_HZ ) / ( TickType_t ) 1000 ) )
+                                                                           ^~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+15:37:38 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/FreeRTOS.h:59,
+                 from ../src/initials_FreeRTOStm.c:65:
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:122:47: error: 'DELAY_10_SECONDS' undeclared (first use in this function)
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                                               ^~~~~~~~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/projdefs.h:41:75: note: in definition of macro 'pdMS_TO_TICKS'
+  #define pdMS_TO_TICKS( xTimeInMs ) ( ( TickType_t ) ( ( ( TickType_t ) ( xTimeInMs ) * ( TickType_t ) configTICK_RATE_HZ ) / ( TickType_t ) 1000 ) )
+                                                                           ^~~~~~~~~
+../src/initials_FreeRTOStm.c:122:47: note: each undeclared identifier is reported only once for each function it appears in
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                                               ^~~~~~~~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/projdefs.h:41:75: note: in definition of macro 'pdMS_TO_TICKS'
+  #define pdMS_TO_TICKS( xTimeInMs ) ( ( TickType_t ) ( ( ( TickType_t ) ( xTimeInMs ) * ( TickType_t ) configTICK_RATE_HZ ) / ( TickType_t ) 1000 ) )
+                                                                           ^~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+15:38:09 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/FreeRTOS.h:59,
+                 from ../src/initials_FreeRTOStm.c:65:
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:122:47: error: 'DELAY_10_SECONDS' undeclared (first use in this function)
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                                               ^~~~~~~~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/projdefs.h:41:75: note: in definition of macro 'pdMS_TO_TICKS'
+  #define pdMS_TO_TICKS( xTimeInMs ) ( ( TickType_t ) ( ( ( TickType_t ) ( xTimeInMs ) * ( TickType_t ) configTICK_RATE_HZ ) / ( TickType_t ) 1000 ) )
+                                                                           ^~~~~~~~~
+../src/initials_FreeRTOStm.c:122:47: note: each undeclared identifier is reported only once for each function it appears in
+  const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+                                               ^~~~~~~~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/projdefs.h:41:75: note: in definition of macro 'pdMS_TO_TICKS'
+  #define pdMS_TO_TICKS( xTimeInMs ) ( ( TickType_t ) ( ( ( TickType_t ) ( xTimeInMs ) * ( TickType_t ) configTICK_RATE_HZ ) / ( TickType_t ) 1000 ) )
+                                                                           ^~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+15:48:27 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79444	   3400	  89456	 172300	  2a10c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+15:57:44 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:58:01 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+16:01:17 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+16:02:39 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79380	   3400	  89456	 172236	  2a0cc	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+16:02:51 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+16:03:20 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+16:03:58 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
