@@ -31,17 +31,26 @@
  *
  *  Created on:		10/01/2020
  *      Author:		Leomar Duran
- *     Version:		1.1
+ *     Version:		1.25
  */
 
 /********************************************************************************************
 * VERSION HISTORY
 ********************************************************************************************
+* 	v1.25 - 10/01/2015
+* 		Fixed TaskLED encoding to ready for TaskBTN.
+*
+* 	v1.2 - 10/01/2015
+* 		Added task TaskLED, priority 2 task which reads
+* 		xQueueBtnSw every 10 seconds with block of 30 seconds
+* 		for switch and button combinations to control the LEDs.
+*
 * 	v1.1 - 10/01/2015
-* 		Added queue xQueueBtnSw.
+* 		Added queue xQueueBtnSw, 10 item queue for button and switch
+* 		data.
 *
 *	v1.0 - Unknown
-*		FreeRTOS Hello World template.
+*		FreeRTOS Hello World template on lab 2 hardware.
 *******************************************************************************************/
 /*
  * Tasks:
@@ -79,6 +88,11 @@ XGpio OutInst;									/* GPIO Device driver instance for output */
 #define	QUEUE_RX_BLOCK		30000UL	/* queue receiving block time, 30 s */
 #define TIMER_CHECK_THRESHOLD	9
 #define	QUEUE_BTN_SW_LEN	10u
+
+/* input data constants */
+#define LED_INIT	0b0000
+#define	BTN_SHIFT	0
+#define BTN_MASK	0b1111
 /*-----------------------------------------------------------*/
 
 /* The Tx and Rx tasks as described at the top of this file. */
@@ -87,27 +101,17 @@ static void prvTaskLED( void *pvParameters );
 static void vTimerCallback( TimerHandle_t pxTimer );
 /*-----------------------------------------------------------*/
 
-/* data type to hold either button data or switch data*/
-typedef union {
-	int btnData;
-	int swcData;
-} InputData;
-
 /* The queue used by the Tx and Rx tasks, as described at the top of this
 file. */
 static TaskHandle_t xTxTask;
 static TaskHandle_t xTaskLED;
 static QueueHandle_t xQueueBtnSw = NULL;
 static TimerHandle_t xTimer = NULL;
-InputData HWdata;
+char HWdata = 0;	/* the data is encoded in a byte */
 long RxtaskCntr = 0;
 
 int main( void )
 {
-	/* clear HWdata */
-	HWdata.btnData = 0;
-	HWdata.swcData = 0;
-
 	int Status;
 
 	const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
@@ -169,7 +173,7 @@ int main( void )
 	/* initialize the GPIO driver for the LEDs */
 	Status = XGpio_Initialize(&OutInst, OUT_DEVICE_ID);
 	if (Status != XST_SUCCESS) {
-		printf("GPIO output to the LEDs failed!\r\n");
+		xil_printf("GPIO output to the LEDs failed!\r\n");
 		return 0;
 	}
 	/* set LEDs to output */
@@ -187,28 +191,32 @@ int main( void )
 /*-----------------------------------------------------------*/
 static void prvTaskLED( void *pvParameters )
 {
-InputData rxData;
-int unsigned iSwc; /* switch counter, unsigned ensures logical RS */
-int ledData = 0;
+	/* all variables local to TaskLED */
+	char rxData;
+	int unsigned iSwc; /* switch counter, unsigned ensures logical RS */
+	int ledData = LED_INIT;
+	int btnData;
+	int swcData = 0b1111; /* for now all switches as if on */
 
-const TickType_t rxBlockSeconds = pdMS_TO_TICKS( QUEUE_RX_BLOCK );
-const TickType_t delaySeconds = pdMS_TO_TICKS( TASKLED_DELAY );
+	const TickType_t rxBlockSeconds = pdMS_TO_TICKS( QUEUE_RX_BLOCK );
+	const TickType_t delaySeconds = pdMS_TO_TICKS( TASKLED_DELAY );
 
 	for( ;; )
 	{
 		/* Block to wait for data arriving on the queue. */
 		xQueueReceive( 	xQueueBtnSw,				/* The queue being read. */
-						/* okay to read either btnData or swcData.
-						 * they overlap */
-						&rxData.btnData,	/* Data is read into this address. */
+						&rxData,	/* Data is read into this address. */
 						rxBlockSeconds );	/* Block by the receiving block time. */
+
+		/* get the button and switch data */
+		btnData = (btnData >> BTN_SHIFT) & BTN_MASK;
 
 		/* loop through the switches */
 		for (iSwc = 0b1000; iSwc; iSwc >>= 1) {
 			/* if the switch matches both a switch in rxData.swcData
 			 * and also a button in rxData.btnData
 			 */
-			if ((iSwc & rxData.swcData & rxData.btnData) == iSwc) {
+			if ((iSwc & swcData & btnData) == iSwc) {
 				/* activate the corresponding LED */
 				ledData |= iSwc;
 				xil_printf("[TaskLED] LED 0x%x on \n", iSwc);
@@ -241,7 +249,7 @@ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
 		/* Send the next value on the queue.  The queue should always be
 		empty at this point so a block time of 0 is used. */
 		xQueueSend( xQueueBtnSw,			/* The queue being written to. */
-					&HWdata.btnData, /* The address of the data being sent. */
+					&HWdata, /* The address of the data being sent. */
 					0UL );			/* The block time. */
 	}
 }
