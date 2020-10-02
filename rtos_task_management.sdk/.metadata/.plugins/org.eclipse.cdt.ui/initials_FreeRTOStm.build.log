@@ -1,4 +1,4 @@
-20:14:00 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+20:42:40 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -19,5 +19,5 @@ arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
 'Finished building: initials_FreeRTOStm.elf.size'
 ' '
 
-20:14:02 Build Finished (took 1s.822ms)
+20:42:42 Build Finished (took 1s.625ms)
 

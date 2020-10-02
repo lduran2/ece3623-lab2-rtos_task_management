@@ -40,6 +40,7 @@
 #define DELAY_10_SECONDS	10000UL
 #define DELAY_1_SECOND		1000UL
 #define TIMER_CHECK_THRESHOLD	9
+#define	QUEUE_BTN_SW_LEN	10u
 /*-----------------------------------------------------------*/
 
 /* The Tx and Rx tasks as described at the top of this file. */
@@ -52,7 +53,7 @@ static void vTimerCallback( TimerHandle_t pxTimer );
 file. */
 static TaskHandle_t xTxTask;
 static TaskHandle_t xRxTask;
-static QueueHandle_t xQueue = NULL;
+static QueueHandle_t xQueueBtnSw = NULL;
 static TimerHandle_t xTimer = NULL;
 char HWstring[15] = "Hello World";
 long RxtaskCntr = 0;
@@ -80,15 +81,18 @@ int main( void )
 				 tskIDLE_PRIORITY + 1,
 				 &xRxTask );
 
-	/* Create the queue used by the tasks.  The Rx task has a higher priority
+	/* Create the queue used by the tasks.  It has room for 10 items
+	 * to encode each new button depressed and new total switch
+	 * settings.
+	 * The Rx task has a higher priority
 	than the Tx task, so will preempt the Tx task and remove values from the
 	queue as soon as the Tx task writes to the queue - therefore the queue can
 	never have more than one item in it. */
-	xQueue = xQueueCreate( 	1,						/* There is only one space in the queue. */
-							sizeof( HWstring ) );	/* Each space in the queue is large enough to hold a uint32_t. */
+	xQueueBtnSw = xQueueCreate( QUEUE_BTN_SW_LEN,		/* There is only one space in the queue. */
+								sizeof( HWstring ) );	/* Each space in the queue is large enough to hold a uint32_t. */
 
 	/* Check the queue was created. */
-	configASSERT( xQueue );
+	configASSERT( xQueueBtnSw );
 
 	/* Create a timer with a timer expiry of 10 seconds. The timer would expire
 	 after 10 seconds and the timer call back would get called. In the timer call back
@@ -133,7 +137,7 @@ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
 
 		/* Send the next value on the queue.  The queue should always be
 		empty at this point so a block time of 0 is used. */
-		xQueueSend( xQueue,			/* The queue being written to. */
+		xQueueSend( xQueueBtnSw,			/* The queue being written to. */
 					HWstring, /* The address of the data being sent. */
 					0UL );			/* The block time. */
 	}
@@ -147,7 +151,7 @@ char Recdstring[15] = "";
 	for( ;; )
 	{
 		/* Block to wait for data arriving on the queue. */
-		xQueueReceive( 	xQueue,				/* The queue being read. */
+		xQueueReceive( 	xQueueBtnSw,				/* The queue being read. */
 						Recdstring,	/* Data is read into this address. */
 						portMAX_DELAY );	/* Wait without a timeout for data. */
 
