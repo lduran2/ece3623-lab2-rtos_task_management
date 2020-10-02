@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="C:/Zynq_Book/rtos_task_management/rtos_task_management.xpr">
+<Project Version="7" Minor="40" Path="C:/Zynq_Book/rtos_data_queue_on_zybo/rtos_task_management.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="a3296a5634ac44de9e3609dd23c55899"/>
@@ -66,8 +66,8 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="zynq_dualchannel_system.bd" FileRelPathName="ip/zynq_dualchannel_system_xbar_0/zynq_dualchannel_system_xbar_0.xci">
-          <Proxy FileSetName="zynq_dualchannel_system_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="zynq_dualchannel_system.bd" FileRelPathName="ip/zynq_dualchannel_system_processing_system7_0_0/zynq_dualchannel_system_processing_system7_0_0.xci">
+          <Proxy FileSetName="zynq_dualchannel_system_processing_system7_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="zynq_dualchannel_system.bd" FileRelPathName="ip/zynq_dualchannel_system_axi_gpio_0_0/zynq_dualchannel_system_axi_gpio_0_0.xci">
           <Proxy FileSetName="zynq_dualchannel_system_axi_gpio_0_0"/>
@@ -75,14 +75,14 @@
         <CompFileExtendedInfo CompFileName="zynq_dualchannel_system.bd" FileRelPathName="ip/zynq_dualchannel_system_axi_gpio_1_0/zynq_dualchannel_system_axi_gpio_1_0.xci">
           <Proxy FileSetName="zynq_dualchannel_system_axi_gpio_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zynq_dualchannel_system.bd" FileRelPathName="ip/zynq_dualchannel_system_processing_system7_0_0/zynq_dualchannel_system_processing_system7_0_0.xci">
-          <Proxy FileSetName="zynq_dualchannel_system_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zynq_dualchannel_system.bd" FileRelPathName="ip/zynq_dualchannel_system_rst_ps7_0_100M_0/zynq_dualchannel_system_rst_ps7_0_100M_0.xci">
-          <Proxy FileSetName="zynq_dualchannel_system_rst_ps7_0_100M_0"/>
+        <CompFileExtendedInfo CompFileName="zynq_dualchannel_system.bd" FileRelPathName="ip/zynq_dualchannel_system_xbar_0/zynq_dualchannel_system_xbar_0.xci">
+          <Proxy FileSetName="zynq_dualchannel_system_xbar_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="zynq_dualchannel_system.bd" FileRelPathName="ip/zynq_dualchannel_system_auto_pc_0/zynq_dualchannel_system_auto_pc_0.xci">
           <Proxy FileSetName="zynq_dualchannel_system_auto_pc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zynq_dualchannel_system.bd" FileRelPathName="ip/zynq_dualchannel_system_rst_ps7_0_100M_0/zynq_dualchannel_system_rst_ps7_0_100M_0.xci">
+          <Proxy FileSetName="zynq_dualchannel_system_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/zynq_dualchannel_system/hdl/zynq_dualchannel_system_wrapper.v">

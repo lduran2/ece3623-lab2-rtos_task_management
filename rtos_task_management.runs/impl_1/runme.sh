@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Zynq_Book/rtos_task_management/rtos_task_management.runs/impl_1'
+HD_PWD='C:/Zynq_Book/rtos_data_queue_on_zybo/rtos_task_management.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
