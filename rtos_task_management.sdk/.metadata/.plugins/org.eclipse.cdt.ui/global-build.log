@@ -2943,3 +2943,1033 @@ arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
   77708	   3388	  89424	 170520	  29a18	initials_FreeRTOStm.elf
 'Finished building: initials_FreeRTOStm.elf.size'
 ' '
+20:53:27 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77708	   3388	  89424	 170520	  29a18	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+20:58:44 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77708	   3388	  89424	 170520	  29a18	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+21:26:18 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77716	   3388	  89424	 170528	  29a20	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+21:48:42 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c:88:11: error: expected identifier or '(' before '=' token
+ QueueData = 0;
+           ^
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:122:17: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+         sizeof( HWstring ) ); /* Each space in the queue is large enough to hold a uint32_t. */
+                 ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+../src/initials_FreeRTOStm.c:122:17: note: each undeclared identifier is reported only once for each function it appears in
+         sizeof( HWstring ) ); /* Each space in the queue is large enough to hold a uint32_t. */
+                 ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../src/initials_FreeRTOStm.c:171:6: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+      HWstring, /* The address of the data being sent. */
+      ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+21:49:01 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c:88:20: error: invalid initializer
+ QueueData HWdata = 0;
+                    ^
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:122:17: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+         sizeof( HWstring ) ); /* Each space in the queue is large enough to hold a uint32_t. */
+                 ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+../src/initials_FreeRTOStm.c:122:17: note: each undeclared identifier is reported only once for each function it appears in
+         sizeof( HWstring ) ); /* Each space in the queue is large enough to hold a uint32_t. */
+                 ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../src/initials_FreeRTOStm.c:171:6: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+      HWstring, /* The address of the data being sent. */
+      ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+21:50:32 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c:88:7: error: variable 'HWdata' has initializer but incomplete type
+ union QueueData HWdata = 0;
+       ^~~~~~~~~
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:122:17: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+         sizeof( HWstring ) ); /* Each space in the queue is large enough to hold a uint32_t. */
+                 ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+../src/initials_FreeRTOStm.c:122:17: note: each undeclared identifier is reported only once for each function it appears in
+         sizeof( HWstring ) ); /* Each space in the queue is large enough to hold a uint32_t. */
+                 ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../src/initials_FreeRTOStm.c:171:6: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+      HWstring, /* The address of the data being sent. */
+      ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c: At top level:
+../src/initials_FreeRTOStm.c:88:17: error: storage size of 'HWdata' isn't known
+ union QueueData HWdata = 0;
+                 ^~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+21:52:14 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:122:17: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+         sizeof( HWstring ) ); /* Each space in the queue is large enough to hold a uint32_t. */
+                 ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+../src/initials_FreeRTOStm.c:122:17: note: each undeclared identifier is reported only once for each function it appears in
+         sizeof( HWstring ) ); /* Each space in the queue is large enough to hold a uint32_t. */
+                 ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../src/initials_FreeRTOStm.c:171:6: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+      HWstring, /* The address of the data being sent. */
+      ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+21:52:25 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c:77:9: error: expected identifier or '(' before '{' token
+ typedef {
+         ^
+../src/initials_FreeRTOStm.c:80:3: warning: data definition has no type or storage class
+ } QueueData;
+   ^~~~~~~~~
+../src/initials_FreeRTOStm.c:80:3: warning: type defaults to 'int' in declaration of 'QueueData' [-Wimplicit-int]
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:122:17: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+         sizeof( HWstring ) ); /* Each space in the queue is large enough to hold a uint32_t. */
+                 ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+../src/initials_FreeRTOStm.c:122:17: note: each undeclared identifier is reported only once for each function it appears in
+         sizeof( HWstring ) ); /* Each space in the queue is large enough to hold a uint32_t. */
+                 ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../src/initials_FreeRTOStm.c:171:6: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+      HWstring, /* The address of the data being sent. */
+      ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c: At top level:
+../src/initials_FreeRTOStm.c:88:17: error: storage size of 'HWdata' isn't known
+ union QueueData HWdata;
+                 ^~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+21:52:30 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c:77:9: error: expected identifier or '(' before '{' token
+ typedef {
+         ^
+../src/initials_FreeRTOStm.c:80:3: warning: data definition has no type or storage class
+ } QueueData;
+   ^~~~~~~~~
+../src/initials_FreeRTOStm.c:80:3: warning: type defaults to 'int' in declaration of 'QueueData' [-Wimplicit-int]
+../src/initials_FreeRTOStm.c:88:1: error: unknown type name 'QueueData'; did you mean 'xQueueCreate'?
+ QueueData HWdata;
+ ^~~~~~~~~
+ xQueueCreate
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:122:17: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+         sizeof( HWstring ) ); /* Each space in the queue is large enough to hold a uint32_t. */
+                 ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+../src/initials_FreeRTOStm.c:122:17: note: each undeclared identifier is reported only once for each function it appears in
+         sizeof( HWstring ) ); /* Each space in the queue is large enough to hold a uint32_t. */
+                 ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../src/initials_FreeRTOStm.c:171:6: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+      HWstring, /* The address of the data being sent. */
+      ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+21:52:36 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:122:17: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+         sizeof( HWstring ) ); /* Each space in the queue is large enough to hold a uint32_t. */
+                 ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+../src/initials_FreeRTOStm.c:122:17: note: each undeclared identifier is reported only once for each function it appears in
+         sizeof( HWstring ) ); /* Each space in the queue is large enough to hold a uint32_t. */
+                 ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:146:94: note: in definition of macro 'xQueueCreate'
+  #define xQueueCreate( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+                                                                                              ^~~~~~~~~~
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../src/initials_FreeRTOStm.c:171:6: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+      HWstring, /* The address of the data being sent. */
+      ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+21:53:16 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../src/initials_FreeRTOStm.c:175:6: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+      HWstring, /* The address of the data being sent. */
+      ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:175:6: note: each undeclared identifier is reported only once for each function it appears in
+      HWstring, /* The address of the data being sent. */
+      ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+21:53:22 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../src/initials_FreeRTOStm.c:175:6: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+      HWstring, /* The address of the data being sent. */
+      ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:175:6: note: each undeclared identifier is reported only once for each function it appears in
+      HWstring, /* The address of the data being sent. */
+      ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+21:53:24 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../src/initials_FreeRTOStm.c:175:6: error: 'HWstring' undeclared (first use in this function); did you mean 'isprint'?
+      HWstring, /* The address of the data being sent. */
+      ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:175:6: note: each undeclared identifier is reported only once for each function it appears in
+      HWstring, /* The address of the data being sent. */
+      ^~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:92: note: in definition of macro 'xQueueSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                            ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+21:54:22 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:90: error: incompatible type for argument 2 of 'xQueueGenericSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                          ^~~~~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:174:3: note: in expansion of macro 'xQueueSend'
+   xQueueSend( xQueueBtnSw,   /* The queue being written to. */
+   ^~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:650:72: note: expected 'const void * const' but argument is of type 'QueueData' {aka 'union <anonymous>'}
+ BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) PRIVILEGED_FUNCTION;
+                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+21:54:51 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:90: error: incompatible type for argument 2 of 'xQueueGenericSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                          ^~~~~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:174:3: note: in expansion of macro 'xQueueSend'
+   xQueueSend( xQueueBtnSw,   /* The queue being written to. */
+   ^~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:650:72: note: expected 'const void * const' but argument is of type 'InputData' {aka 'union <anonymous>'}
+ BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) PRIVILEGED_FUNCTION;
+                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskLED':
+../src/initials_FreeRTOStm.c:189:7: error: 'Recdstring' undeclared (first use in this function)
+       Recdstring, /* Data is read into this address. */
+       ^~~~~~~~~~
+../src/initials_FreeRTOStm.c:189:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/initials_FreeRTOStm.c:183:11: warning: unused variable 'rxData' [-Wunused-variable]
+ InputData rxData;
+           ^~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+21:55:41 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskLED':
+../src/initials_FreeRTOStm.c:171:7: error: incompatible type for argument 2 of 'xQueueReceive'
+       rxData, /* Data is read into this address. */
+       ^~~~~~
+In file included from ../src/initials_FreeRTOStm.c:55:
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:868:62: note: expected 'void * const' but argument is of type 'InputData' {aka 'union <anonymous>'}
+ BaseType_t xQueueReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+                                                 ~~~~~~~~~~~~~^~~~~~~~
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:90: error: incompatible type for argument 2 of 'xQueueGenericSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                          ^~~~~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:192:3: note: in expansion of macro 'xQueueSend'
+   xQueueSend( xQueueBtnSw,   /* The queue being written to. */
+   ^~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:650:72: note: expected 'const void * const' but argument is of type 'InputData' {aka 'union <anonymous>'}
+ BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) PRIVILEGED_FUNCTION;
+                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+21:55:54 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:90: error: incompatible type for argument 2 of 'xQueueGenericSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                          ^~~~~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:192:3: note: in expansion of macro 'xQueueSend'
+   xQueueSend( xQueueBtnSw,   /* The queue being written to. */
+   ^~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:650:72: note: expected 'const void * const' but argument is of type 'InputData' {aka 'union <anonymous>'}
+ BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) PRIVILEGED_FUNCTION;
+                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+21:56:27 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:90: error: incompatible type for argument 2 of 'xQueueGenericSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                          ^~~~~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:192:3: note: in expansion of macro 'xQueueSend'
+   xQueueSend( xQueueBtnSw,   /* The queue being written to. */
+   ^~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:650:72: note: expected 'const void * const' but argument is of type 'InputData' {aka 'union <anonymous>'}
+ BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) PRIVILEGED_FUNCTION;
+                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+21:58:11 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskLED':
+../src/initials_FreeRTOStm.c:176:36: error: expected expression before '>=' token
+   for (iSwc = 0b1000; iSwc; iSwc >>>= 1) {
+                                    ^~
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:90: error: incompatible type for argument 2 of 'xQueueGenericSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                          ^~~~~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:198:3: note: in expansion of macro 'xQueueSend'
+   xQueueSend( xQueueBtnSw,   /* The queue being written to. */
+   ^~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:650:72: note: expected 'const void * const' but argument is of type 'InputData' {aka 'union <anonymous>'}
+ BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) PRIVILEGED_FUNCTION;
+                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+21:58:15 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:90: error: incompatible type for argument 2 of 'xQueueGenericSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                          ^~~~~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:198:3: note: in expansion of macro 'xQueueSend'
+   xQueueSend( xQueueBtnSw,   /* The queue being written to. */
+   ^~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:650:72: note: expected 'const void * const' but argument is of type 'InputData' {aka 'union <anonymous>'}
+ BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) PRIVILEGED_FUNCTION;
+                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+22:00:32 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:90: error: incompatible type for argument 2 of 'xQueueGenericSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                          ^~~~~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:206:3: note: in expansion of macro 'xQueueSend'
+   xQueueSend( xQueueBtnSw,   /* The queue being written to. */
+   ^~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:650:72: note: expected 'const void * const' but argument is of type 'InputData' {aka 'union <anonymous>'}
+ BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) PRIVILEGED_FUNCTION;
+                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+22:03:00 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:90: error: incompatible type for argument 2 of 'xQueueGenericSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                          ^~~~~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:212:3: note: in expansion of macro 'xQueueSend'
+   xQueueSend( xQueueBtnSw,   /* The queue being written to. */
+   ^~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:650:72: note: expected 'const void * const' but argument is of type 'InputData' {aka 'union <anonymous>'}
+ BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) PRIVILEGED_FUNCTION;
+                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+22:04:50 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:90: error: incompatible type for argument 2 of 'xQueueGenericSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                          ^~~~~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:212:3: note: in expansion of macro 'xQueueSend'
+   xQueueSend( xQueueBtnSw,   /* The queue being written to. */
+   ^~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:650:72: note: expected 'const void * const' but argument is of type 'InputData' {aka 'union <anonymous>'}
+ BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) PRIVILEGED_FUNCTION;
+                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+22:05:09 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+In file included from ../src/initials_FreeRTOStm.c:55:
+../src/initials_FreeRTOStm.c: In function 'prvTxTask':
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:479:90: error: incompatible type for argument 2 of 'xQueueGenericSend'
+ #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+                                                                                          ^~~~~~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:212:3: note: in expansion of macro 'xQueueSend'
+   xQueueSend( xQueueBtnSw,   /* The queue being written to. */
+   ^~~~~~~~~~
+../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include/queue.h:650:72: note: expected 'const void * const' but argument is of type 'InputData' {aka 'union <anonymous>'}
+ BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) PRIVILEGED_FUNCTION;
+                                                     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+22:05:54 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77844	   3372	  89424	 170640	  29a90	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:07:32 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77876	   3372	  89424	 170672	  29ab0	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:09:36 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77828	   3372	  89424	 170624	  29a80	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:10:09 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77828	   3372	  89424	 170624	  29a80	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:10:26 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77828	   3372	  89424	 170624	  29a80	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:10:38 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77828	   3372	  89424	 170624	  29a80	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:10:41 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77828	   3372	  89424	 170624	  29a80	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:15:14 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77844	   3372	  89424	 170640	  29a90	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:18:48 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c:69:1: error: unknown type name 'XGpio'
+ XGpio  InInst;         /* GPIO Device driver instance for input */
+ ^~~~~
+../src/initials_FreeRTOStm.c:70:1: error: unknown type name 'XGpio'
+ XGpio OutInst;         /* GPIO Device driver instance for output */
+ ^~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+22:19:12 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77844	   3372	  89456	 170672	  29ab0	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:20:21 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:168:2: error: 'Status' undeclared (first use in this function); did you mean 'XStatus'?
+  Status = XGpio_Initialize(&OutInst, OUT_DEVICE_ID);
+  ^~~~~~
+  XStatus
+../src/initials_FreeRTOStm.c:168:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/initials_FreeRTOStm.c:170:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("GPIO output to the LEDs failed!\r\n");
+   ^~~~~~
+../src/initials_FreeRTOStm.c:170:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/initials_FreeRTOStm.c:170:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/initials_FreeRTOStm.c:62:1:
++#include <stdio.h>
+ 
+../src/initials_FreeRTOStm.c:170:3:
+   printf("GPIO output to the LEDs failed!\r\n");
+   ^~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+22:20:45 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:172:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("GPIO output to the LEDs failed!\r\n");
+   ^~~~~~
+../src/initials_FreeRTOStm.c:172:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/initials_FreeRTOStm.c:172:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/initials_FreeRTOStm.c:62:1:
++#include <stdio.h>
+ 
+../src/initials_FreeRTOStm.c:172:3:
+   printf("GPIO output to the LEDs failed!\r\n");
+   ^~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83124	   3400	  89456	 175980	  2af6c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:21:59 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:172:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("GPIO output to the LEDs failed!\r\n");
+   ^~~~~~
+../src/initials_FreeRTOStm.c:172:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/initials_FreeRTOStm.c:172:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/initials_FreeRTOStm.c:62:1:
++#include <stdio.h>
+ 
+../src/initials_FreeRTOStm.c:172:3:
+   printf("GPIO output to the LEDs failed!\r\n");
+   ^~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83124	   3400	  89456	 175980	  2af6c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:23:16 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:172:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("GPIO output to the LEDs failed!\r\n");
+   ^~~~~~
+../src/initials_FreeRTOStm.c:172:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/initials_FreeRTOStm.c:172:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/initials_FreeRTOStm.c:62:1:
++#include <stdio.h>
+ 
+../src/initials_FreeRTOStm.c:172:3:
+   printf("GPIO output to the LEDs failed!\r\n");
+   ^~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83124	   3400	  89456	 175980	  2af6c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:23:43 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:172:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("GPIO output to the LEDs failed!\r\n");
+   ^~~~~~
+../src/initials_FreeRTOStm.c:172:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/initials_FreeRTOStm.c:172:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/initials_FreeRTOStm.c:62:1:
++#include <stdio.h>
+ 
+../src/initials_FreeRTOStm.c:172:3:
+   printf("GPIO output to the LEDs failed!\r\n");
+   ^~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83124	   3400	  89456	 175980	  2af6c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:24:02 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:172:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("GPIO output to the LEDs failed!\r\n");
+   ^~~~~~
+../src/initials_FreeRTOStm.c:172:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/initials_FreeRTOStm.c:172:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/initials_FreeRTOStm.c:62:1:
++#include <stdio.h>
+ 
+../src/initials_FreeRTOStm.c:172:3:
+   printf("GPIO output to the LEDs failed!\r\n");
+   ^~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83124	   3400	  89456	 175980	  2af6c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:26:29 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:27:43 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:29:26 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:172:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("GPIO output to the LEDs failed!\r\n");
+   ^~~~~~
+../src/initials_FreeRTOStm.c:172:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/initials_FreeRTOStm.c:172:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/initials_FreeRTOStm.c:62:1:
++#include <stdio.h>
+ 
+../src/initials_FreeRTOStm.c:172:3:
+   printf("GPIO output to the LEDs failed!\r\n");
+   ^~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83124	   3400	  89456	 175980	  2af6c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:29:47 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:30:43 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

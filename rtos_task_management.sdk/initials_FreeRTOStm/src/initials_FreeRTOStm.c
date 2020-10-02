@@ -26,6 +26,28 @@
 
     1 tab == 4 spaces!
 */
+/*
+ * initials_FreeRTOStm.c
+ *
+ *  Created on:		10/01/2020
+ *      Author:		Leomar Duran
+ *     Version:		1.1
+ */
+
+/********************************************************************************************
+* VERSION HISTORY
+********************************************************************************************
+* 	v1.1 - 10/01/2015
+* 		Added queue xQueueBtnSw.
+*
+*	v1.0 - Unknown
+*		FreeRTOS Hello World template.
+*******************************************************************************************/
+/*
+ * Tasks:
+ *   	TaskLED := priority 2, received a button value and total
+ *   	current switch settings from xQueueBtnSw every 10 seconds.
+ */
 
 /* FreeRTOS includes. */
 #include "FreeRTOS.h"
@@ -35,51 +57,79 @@
 /* Xilinx includes. */
 #include "xil_printf.h"
 #include "xparameters.h"
+#include "xgpio.h"
+#include "xstatus.h"
 
+/* GPIO definitions */
+#define  IN_DEVICE_ID	XPAR_AXI_GPIO_0_DEVICE_ID	/* GPIO device for input */
+#define OUT_DEVICE_ID	XPAR_AXI_GPIO_1_DEVICE_ID	/* GPIO device that LEDs are connected to */
+#define BTN_CHANNEL	1								/* GPIO port for buttons */
+#define  SW_CHANNEL	2								/* GPIO port for switches */
+#define LED_CHANNEL	1								/* GPIO port for LEDs */
+
+/* GPIO instances */
+XGpio  InInst;									/* GPIO Device driver instance for input */
+XGpio OutInst;									/* GPIO Device driver instance for output */
+
+/* time and queue constants */
 #define TIMER_ID	1
 #define DELAY_10_SECONDS	10000UL
 #define DELAY_1_SECOND		1000UL
+#define	TASKLED_DELAY		10000UL
+#define	QUEUE_RX_BLOCK		30000UL	/* queue receiving block time, 30 s */
 #define TIMER_CHECK_THRESHOLD	9
 #define	QUEUE_BTN_SW_LEN	10u
 /*-----------------------------------------------------------*/
 
 /* The Tx and Rx tasks as described at the top of this file. */
 static void prvTxTask( void *pvParameters );
-static void prvRxTask( void *pvParameters );
+static void prvTaskLED( void *pvParameters );
 static void vTimerCallback( TimerHandle_t pxTimer );
 /*-----------------------------------------------------------*/
+
+/* data type to hold either button data or switch data*/
+typedef union {
+	int btnData;
+	int swcData;
+} InputData;
 
 /* The queue used by the Tx and Rx tasks, as described at the top of this
 file. */
 static TaskHandle_t xTxTask;
-static TaskHandle_t xRxTask;
+static TaskHandle_t xTaskLED;
 static QueueHandle_t xQueueBtnSw = NULL;
 static TimerHandle_t xTimer = NULL;
-char HWstring[15] = "Hello World";
+InputData HWdata;
 long RxtaskCntr = 0;
 
 int main( void )
 {
+	/* clear HWdata */
+	HWdata.btnData = 0;
+	HWdata.swcData = 0;
+
+	int Status;
+
 	const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
 
-	xil_printf( "Hello from Freertos example main\r\n" );
+	xil_printf( "Starting all tasks . . .\n" );
 
 	/* Create the two tasks.  The Tx task is given a lower priority than the
 	Rx task, so the Rx task will leave the Blocked state and pre-empt the Tx
 	task as soon as the Tx task places an item in the queue. */
-	xTaskCreate( 	prvTxTask, 					/* The function that implements the task. */
-					( const char * ) "Tx", 		/* Text name for the task, provided to assist debugging only. */
+	xTaskCreate( 	prvTaskLED,					/* The function that implements the task. */
+					( const char * ) "TaskLED",	/* Text name for the task, provided to assist debugging only. */
 					configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
 					NULL, 						/* The task parameter is not used, so set to NULL. */
-					tskIDLE_PRIORITY,			/* The task runs at the idle priority. */
-					&xTxTask );
+					2, /* priority */			/* The task runs at the idle priority. */
+					&xTaskLED );
 
-	xTaskCreate( prvRxTask,
-				 ( const char * ) "GB",
-				 configMINIMAL_STACK_SIZE,
-				 NULL,
-				 tskIDLE_PRIORITY + 1,
-				 &xRxTask );
+	xTaskCreate( 	prvTxTask,
+					( const char * ) "Tx",
+					configMINIMAL_STACK_SIZE,
+					NULL,
+					tskIDLE_PRIORITY,
+					&xTxTask );
 
 	/* Create the queue used by the tasks.  It has room for 10 items
 	 * to encode each new button depressed and new total switch
@@ -88,8 +138,8 @@ int main( void )
 	than the Tx task, so will preempt the Tx task and remove values from the
 	queue as soon as the Tx task writes to the queue - therefore the queue can
 	never have more than one item in it. */
-	xQueueBtnSw = xQueueCreate( QUEUE_BTN_SW_LEN,		/* There is only one space in the queue. */
-								sizeof( HWstring ) );	/* Each space in the queue is large enough to hold a uint32_t. */
+	xQueueBtnSw = xQueueCreate( QUEUE_BTN_SW_LEN,	/* There is only one space in the queue. */
+								sizeof( HWdata ) );	/* Each space in the queue is large enough to hold a uint32_t. */
 
 	/* Check the queue was created. */
 	configASSERT( xQueueBtnSw );
@@ -116,6 +166,15 @@ int main( void )
 	/* Start the tasks and timer running. */
 	vTaskStartScheduler();
 
+	/* initialize the GPIO driver for the LEDs */
+	Status = XGpio_Initialize(&OutInst, OUT_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		printf("GPIO output to the LEDs failed!\r\n");
+		return 0;
+	}
+	/* set LEDs to output */
+	XGpio_SetDataDirection(&OutInst, LED_CHANNEL, 0x00);
+
 	/* If all is well, the scheduler will now be running, and the following line
 	will never be reached.  If the following line does execute, then there was
 	insufficient FreeRTOS heap memory available for the idle and/or timer tasks
@@ -124,6 +183,50 @@ int main( void )
 	for( ;; );
 }
 
+
+/*-----------------------------------------------------------*/
+static void prvTaskLED( void *pvParameters )
+{
+InputData rxData;
+int unsigned iSwc; /* switch counter, unsigned ensures logical RS */
+int ledData = 0;
+
+const TickType_t rxBlockSeconds = pdMS_TO_TICKS( QUEUE_RX_BLOCK );
+const TickType_t delaySeconds = pdMS_TO_TICKS( TASKLED_DELAY );
+
+	for( ;; )
+	{
+		/* Block to wait for data arriving on the queue. */
+		xQueueReceive( 	xQueueBtnSw,				/* The queue being read. */
+						/* okay to read either btnData or swcData.
+						 * they overlap */
+						&rxData.btnData,	/* Data is read into this address. */
+						rxBlockSeconds );	/* Block by the receiving block time. */
+
+		/* loop through the switches */
+		for (iSwc = 0b1000; iSwc; iSwc >>= 1) {
+			/* if the switch matches both a switch in rxData.swcData
+			 * and also a button in rxData.btnData
+			 */
+			if ((iSwc & rxData.swcData & rxData.btnData) == iSwc) {
+				/* activate the corresponding LED */
+				ledData |= iSwc;
+				xil_printf("[TaskLED] LED 0x%x on \n", iSwc);
+			}
+			else {
+				/* otherwise deactivate the corresponding LED */
+				ledData &= ~iSwc;
+				xil_printf("[TaskLED] LED 0x%x off\n", iSwc);
+			}
+		}
+
+		/* update LED display */
+		XGpio_DiscreteWrite(&OutInst, LED_CHANNEL, ledData);
+
+		/* wait before reading again */
+		vTaskDelay( delaySeconds );
+	}
+} /* end static void prvTaskLED( void *pvParameters ) */
 
 /*-----------------------------------------------------------*/
 static void prvTxTask( void *pvParameters )
@@ -138,26 +241,8 @@ const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
 		/* Send the next value on the queue.  The queue should always be
 		empty at this point so a block time of 0 is used. */
 		xQueueSend( xQueueBtnSw,			/* The queue being written to. */
-					HWstring, /* The address of the data being sent. */
+					&HWdata.btnData, /* The address of the data being sent. */
 					0UL );			/* The block time. */
-	}
-}
-
-/*-----------------------------------------------------------*/
-static void prvRxTask( void *pvParameters )
-{
-char Recdstring[15] = "";
-
-	for( ;; )
-	{
-		/* Block to wait for data arriving on the queue. */
-		xQueueReceive( 	xQueueBtnSw,				/* The queue being read. */
-						Recdstring,	/* Data is read into this address. */
-						portMAX_DELAY );	/* Wait without a timeout for data. */
-
-		/* Print the received data. */
-		xil_printf( "Rx task received string from Tx task: %s\r\n", Recdstring );
-		RxtaskCntr++;
 	}
 }
 
@@ -184,7 +269,7 @@ static void vTimerCallback( TimerHandle_t pxTimer )
 		xil_printf("FreeRTOS Hello World Example FAILED");
 	}
 
-	vTaskDelete( xRxTask );
+	//vTaskDelete( xTaskLED );
 	vTaskDelete( xTxTask );
 }
 
