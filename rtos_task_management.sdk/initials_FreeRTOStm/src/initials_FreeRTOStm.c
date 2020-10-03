@@ -31,40 +31,43 @@
  *
  *  Created on:		10/01/2020
  *      Author:		Leomar Duran
- *     Version:		1.50
+ *     Version:		1.53
  */
 
 /********************************************************************************************
 * VERSION HISTORY
 ********************************************************************************************
-* 	v1.50 - 10/02/2015
+* 	v1.53 - 10/03/2020
+* 		Objective 5, fix flashing speed with xQueueReceive.
+*
+* 	v1.50 - 10/02/2020
 * 		Objective 5, flashing on queue empty implemented (slow with
 * 		vTaskDelay).
 *
-* 	v1.45 - 10/02/2015
+* 	v1.45 - 10/02/2020
 * 		TaskSW, Overrode previous buttons with switches.
 *
-* 	v1.40 - 10/02/2015
+* 	v1.40 - 10/02/2020
 * 		Implemented task TaskSW.
 *
-* 	v1.35 - 10/02/2015
+* 	v1.35 - 10/02/2020
 * 		Allowed button data to be zero.
 *
-* 	v1.30 - 10/02/2015
+* 	v1.30 - 10/02/2020
 * 		Added task TaskBTN, priority 2 task which transmits button
 * 		presses to xQueueBtnSw, whenever a new non-zero button
 * 		combination is depressed.  Debounce stops when the buttons are
 * 		released.
 *
-* 	v1.25 - 10/01/2015
+* 	v1.25 - 10/01/2020
 * 		Fixed TaskLED encoding to ready for TaskBTN.
 *
-* 	v1.2 - 10/01/2015
+* 	v1.2 - 10/01/2020
 * 		Added task TaskLED, priority 2 task which reads
 * 		xQueueBtnSw every 10 seconds with block of 30 seconds
 * 		for switch and button combinations to control the LEDs.
 *
-* 	v1.1 - 10/01/2015
+* 	v1.1 - 10/01/2020
 * 		Added queue xQueueBtnSw, 10 item queue for button and switch
 * 		data.
 *
@@ -103,6 +106,7 @@
 #define LED_CHANNEL	1								/* GPIO port for LEDs */
 
 typedef char* String;
+typedef char bool;
 
 /* GPIO instances */
 XGpio  InInst;									/* GPIO Device driver instance for input */
@@ -249,15 +253,16 @@ static void prvTaskLED( void *pvParameters )
 	int unsigned ledData = LED_INIT;
 
 	int unsigned iBtn; /* switch counter, unsigned ensures logical RS */
-	int unsigned btnData;
-	int unsigned swcData;
+	int unsigned btnData = BTN_INIT;
+	int unsigned swcData =  SW_INIT;
 	int unsigned nextBtnData;
 	int unsigned nextSwcData;
 
 	char unsigned rxData;
-	BaseType_t reception;
+	BaseType_t memo; /* a memorandum of receiving from queue */
 
 	int ledError = 0b1111;
+	bool shouldPrintNextError = TRUE;
 
 	const TickType_t rxBlockTicks = pdMS_TO_TICKS( QUEUE_RX_BLOCK );
 	const TickType_t delayTicks = pdMS_TO_TICKS( TASKLED_DELAY );
@@ -269,22 +274,31 @@ static void prvTaskLED( void *pvParameters )
 	for( ;; )
 	{
 		/* Block to wait for data arriving on the queue. */
-		reception =
+		memo =
 				xQueueReceive( 	xQueueBtnSw,				/* The queue being read. */
 								&rxData,	/* Data is read into this address. */
 								rxBlockTicks );	/* Block by the receiving block time. */
 
-		/* if the queue is empty, display an error and stop */
-		if (reception == errQUEUE_EMPTY) {
-			xil_printf("[%s] ERROR: QUEUE IS EMPTY\n", task);
+		/* if the queue is empty, display an error and wait */
+		while (memo == errQUEUE_EMPTY) {
+			if (shouldPrintNextError) {
+				xil_printf("[%s] ERROR: QUEUE IS EMPTY\n", task);
+				shouldPrintNextError = FALSE; /* don't print until error is done */
+			}
 			XGpio_DiscreteWrite(&OutInst, LED_CHANNEL, ledError);
 			ledError = ~ledError;
-			vTaskDelay( (ledError != 0b0000) ? errorDutyOnTicks : errorDutyOffTicks );
-			continue;
-		}
+			/* instead of waiting doing nothing, wait while checking queue */
+			memo =
+					xQueueReceive( 	xQueueBtnSw,
+									&rxData,
+									(ledError != 0b0000)
+										? errorDutyOnTicks : errorDutyOffTicks );
+		} /* end while (memo == errQUEUE_EMPTY) */
+
+		shouldPrintNextError = TRUE;	/* okay to print again */
 
 		/* log the data received */
-		xil_printf("[%s] data received:\t0x%x\t-> ", task, rxData);
+		xil_printf("[%s] data received:\t0x%02x\t-> ", task, rxData);
 
 		/* get the button and switch data */
 		nextBtnData = ((rxData >> BTN_SHIFT) & BTN_MASK);
@@ -348,8 +362,8 @@ static void prvTaskBTN( void *pvParameters )
 	{
 		/* read in the button data */
 		nextData = XGpio_DiscreteRead(&InInst, BTN_CHANNEL);
-		/* if no nonzero change, skip this loop run */
-		if ((nextData == 0b0000) || (nextData == data)) continue;
+		/* until press, skip this loop run */
+		if (nextData == 0b0000) continue;
 
 		/* debounce by looping until no button pressed */
 		while (XGpio_DiscreteRead(&InInst, BTN_CHANNEL) == 0b0000) {
@@ -367,8 +381,8 @@ static void prvTaskBTN( void *pvParameters )
 		/* encode the data */
 		encodedData = ((data & BTN_MASK) << BTN_SHIFT);
 
-		/* Send the next value on the queue.  The queue should always be
-		empty at this point so a block time of 0 is used. */
+		/* Send the next value on the queue.
+		 * Sends immediately. So a block time of 0 is used. */
 		xQueueSend( xQueueBtnSw,			/* The queue being written to. */
 					&encodedData, /* The address of the data being sent. */
 					txBlockTicks );	/* The block time. */
@@ -405,8 +419,8 @@ static void prvTaskSW ( void *pvParameters )
 		/* encode the data */
 		encodedData = ((data &  SW_MASK) <<  SW_SHIFT);
 
-		/* Send the next value on the queue.  The queue should always be
-		empty at this point so a block time of 0 is used. */
+		/* Send the next value on the queue.
+		 * Sends immediately. So a block time of 0 is used. */
 		xQueueSend( xQueueBtnSw,			/* The queue being written to. */
 					&encodedData, /* The address of the data being sent. */
 					txBlockTicks );	/* The block time. */
