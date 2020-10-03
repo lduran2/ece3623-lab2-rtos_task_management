@@ -6981,3 +6981,546 @@ arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
   79716	   3400	  89456	 172572	  2a21c	initials_FreeRTOStm.elf
 'Finished building: initials_FreeRTOStm.elf.size'
 ' '
+21:17:22 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79716	   3400	  89456	 172572	  2a21c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+21:21:59 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+Command canceled
+21:23:59 **** Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79716	   3400	  89456	 172572	  2a21c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+21:33:12 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79716	   3400	  89456	 172572	  2a21c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+21:33:48 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79716	   3400	  89456	 172572	  2a21c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+21:34:05 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79716	   3400	  89456	 172572	  2a21c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+21:34:17 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79716	   3400	  89456	 172572	  2a21c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+21:36:54 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79780	   3400	  89456	 172636	  2a25c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+21:37:26 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79780	   3400	  89456	 172636	  2a25c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+21:38:56 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:46:58 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79804	   3400	  89456	 172660	  2a274	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+21:47:10 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:04:29 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79828	   3400	  89456	 172684	  2a28c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:06:58 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79828	   3400	  89456	 172684	  2a28c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:07:21 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79828	   3400	  89456	 172684	  2a28c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:07:32 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:09:06 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:11:51 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79828	   3400	  89456	 172684	  2a28c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:12:00 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:14:59 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79828	   3400	  89456	 172684	  2a28c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:15:28 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79828	   3400	  89456	 172684	  2a28c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:15:43 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79828	   3400	  89456	 172684	  2a28c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:15:56 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79828	   3400	  89456	 172684	  2a28c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:16:04 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:20:27 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79828	   3400	  89456	 172684	  2a28c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:22:06 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:30:36 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79812	   3400	  89456	 172668	  2a27c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:30:44 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:31:16 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:34:11 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79812	   3400	  89456	 172668	  2a27c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:34:22 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:36:19 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79812	   3400	  89456	 172668	  2a27c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:36:36 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79804	   3400	  89456	 172660	  2a274	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:36:48 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79804	   3400	  89456	 172660	  2a274	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+22:37:01 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:37:38 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:45:41 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79804	   3400	  89456	 172660	  2a274	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '

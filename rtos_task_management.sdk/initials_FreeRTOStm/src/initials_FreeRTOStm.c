@@ -31,12 +31,15 @@
  *
  *  Created on:		10/01/2020
  *      Author:		Leomar Duran
- *     Version:		1.40
+ *     Version:		1.45
  */
 
 /********************************************************************************************
 * VERSION HISTORY
 ********************************************************************************************
+* 	v1.45 - 10/02/2015
+* 		TaskSW, Overrode previous buttons with switches.
+*
 * 	v1.40 - 10/02/2015
 * 		Implemented task TaskSW.
 *
@@ -237,13 +240,13 @@ static void prvTaskLED( void *pvParameters )
 {
 	/* all variables local to TaskLED */
 	String task = "TaskLED";
-	char rxData;
-	int unsigned iSwc; /* switch counter, unsigned ensures logical RS */
-	int ledData = LED_INIT;
-	int btnData;
-	int swcData;
-	int nextBtnData;
-	int nextSwcData;
+	char unsigned rxData;
+	int unsigned iBtn; /* switch counter, unsigned ensures logical RS */
+	int unsigned ledData = LED_INIT;
+	int unsigned btnData;
+	int unsigned swcData;
+	int unsigned nextBtnData;
+	int unsigned nextSwcData;
 
 	const TickType_t rxBlockTicks = pdMS_TO_TICKS( QUEUE_RX_BLOCK );
 	const TickType_t delayTicks = pdMS_TO_TICKS( TASKLED_DELAY );
@@ -258,43 +261,41 @@ static void prvTaskLED( void *pvParameters )
 						rxBlockTicks );	/* Block by the receiving block time. */
 
 		/* log the data received */
-		xil_printf("[%s] data received:\t0x%x\n", task, rxData);
+		xil_printf("[%s] data received:\t0x%x\t-> ", task, rxData);
 
-		/* if all data is 0, just clear the LEDs and continue*/
-		if (rxData == 0b00000000) {
-			ledData = 0b0000;
+		/* get the button and switch data */
+		nextBtnData = ((rxData >> BTN_SHIFT) & BTN_MASK);
+		nextSwcData = ((rxData >>  SW_SHIFT) &  SW_MASK);
+
+		/* update the data that are nonzero */
+		/* however, if buttons are 0, clear switches*/
+		if (nextBtnData != 0b0000) {
+			btnData = nextBtnData;
 		}
-		/* otherwise, decode rxData and set the LEDs accordingly */
-		else {
-			/* get the button and switch data */
-			nextBtnData = ((rxData >> BTN_SHIFT) & BTN_MASK);
-			nextSwcData = ((rxData >>  SW_SHIFT) &  SW_MASK);
+		if ((nextSwcData != 0b0000) || (nextBtnData == 0b0000)) {
+			swcData = nextSwcData;
+		}
 
-			/* depending on which btn or sw is nonzero, update the
-			 * data */
-			if (nextBtnData != 0b0000) {
-				btnData = nextBtnData;
-			}
-			else /* 0 btns, 0 swcs are partition. so swcs cannot be 0 */
-			{
-				 swcData =  nextSwcData;
-			}
+		/* ignore button presses that occurred while the switch
+		 * was off */
+		btnData &= swcData;
 
-			/* loop through the switches */
-			for (iSwc = 0b1000; iSwc; iSwc >>= 1) {
-				/* if the switch matches both a switch in swcData
-				 * and also a button in btnData,
-				 */
-				if ((iSwc & swcData & btnData) == iSwc) {
-					/* activate the corresponding LED */
-					ledData |= iSwc;
-					xil_printf("[%s] LED 0x%x\ton \n", task, iSwc);
-				}
-				else {
-					/* otherwise, deactivate the corresponding LED */
-					ledData &= ~iSwc;
-					xil_printf("[%s] LED 0x%x\toff\n", task, iSwc);
-				}
+		xil_printf("switch: 0x%x\tbutton: 0x%x\n", swcData, btnData);
+
+		/* loop through the switches */
+		for (iBtn = 0b1000; iBtn; iBtn >>= 1) {
+			/* if the switch matches both a switch in swcData
+			 * and also a button in btnData,
+			 */
+			if ((iBtn & btnData) == iBtn) {
+				/* activate the corresponding LED */
+				ledData |= iBtn;
+				xil_printf("[%s] LED 0x%x\ton \n", task, iBtn);
+			}
+			else {
+				/* otherwise, deactivate the corresponding LED */
+				ledData &= ~iBtn;
+				xil_printf("[%s] LED 0x%x\toff\n", task, iBtn);
 			}
 		}
 
@@ -311,9 +312,9 @@ static void prvTaskBTN( void *pvParameters )
 {
 	/* all variables local to TaskBTN */
 	String task = "TaskBTN";
-	int data = BTN_INIT;
-	int nextData;
-	int encodedData;
+	int unsigned data = BTN_INIT;
+	int unsigned nextData;
+	int unsigned encodedData;
 
 	const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
 	const TickType_t txBlockTicks = pdMS_TO_TICKS( QUEUE_TX_BLOCK );
@@ -324,8 +325,8 @@ static void prvTaskBTN( void *pvParameters )
 	{
 		/* read in the button data */
 		nextData = XGpio_DiscreteRead(&InInst, BTN_CHANNEL);
-		/* if no change, skip this loop run */
-		if (nextData == data) continue;
+		/* if no nonzero change, skip this loop run */
+		if ((nextData == 0b0000) || (nextData == data)) continue;
 
 		/* debounce by looping until no button pressed */
 		while (XGpio_DiscreteRead(&InInst, BTN_CHANNEL) == 0b0000) {
@@ -334,8 +335,8 @@ static void prvTaskBTN( void *pvParameters )
 		}
 
 		/* log the buttons pressed */
-		xil_printf("[%s] buttons pressed:\t0x%x from 0x%x\n",
-				task, nextData, data);
+		xil_printf("[%s] buttons pressed:\t0x%x -> 0x%x\n",
+				task, data, nextData);
 
 		/* since change, update the data */
 		data = nextData;
@@ -356,9 +357,9 @@ static void prvTaskSW ( void *pvParameters )
 {
 	/* all variables local to TaskSW  */
 	String task = "TaskSW ";
-	int data =  SW_INIT;
-	int nextData;
-	int encodedData;
+	int unsigned data =  SW_INIT;
+	int unsigned nextData;
+	int unsigned encodedData;
 
 	const TickType_t txBlockTicks = pdMS_TO_TICKS( QUEUE_TX_BLOCK );
 
@@ -375,8 +376,8 @@ static void prvTaskSW ( void *pvParameters )
 		data = nextData;
 
 		/* log the switches thrown */
-		xil_printf("[%s] switches thrown:\t0x%x from 0x%x\n",
-				task, nextData, data);
+		xil_printf("[%s] switches thrown:\t0x%x -> 0x%x\n",
+				task, data, nextData);
 
 		/* encode the data */
 		encodedData = ((data &  SW_MASK) <<  SW_SHIFT);
