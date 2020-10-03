@@ -31,12 +31,16 @@
  *
  *  Created on:		10/01/2020
  *      Author:		Leomar Duran
- *     Version:		1.45
+ *     Version:		1.50
  */
 
 /********************************************************************************************
 * VERSION HISTORY
 ********************************************************************************************
+* 	v1.50 - 10/02/2015
+* 		Objective 5, flashing on queue empty implemented (slow with
+* 		vTaskDelay).
+*
 * 	v1.45 - 10/02/2015
 * 		TaskSW, Overrode previous buttons with switches.
 *
@@ -108,8 +112,10 @@ XGpio OutInst;									/* GPIO Device driver instance for output */
 #define TIMER_ID	1
 #define DELAY_10_SECONDS	10000UL
 #define DELAY_1_SECOND		1000UL
-#define	TASKLED_DELAY		10000UL	/* wait 10 seconds between LED updates*/
-#define	DEBOUNCE_DELAY		250UL	/* wait 0.250 seconds to debounce */
+#define	TASKLED_DELAY		10000UL	/* wait between LED updates, 10 s */
+#define	ERROR_DUTY_ON		1000UL	/* error duty cycle  on time */
+#define	ERROR_DUTY_OFF		1000UL	/* error duty cycle off time */
+#define	DEBOUNCE_DELAY		250UL	/* wait to debounce, 0.250 s */
 #define	QUEUE_RX_BLOCK		30000UL	/* queue receiving block time, 30 s */
 #define	QUEUE_TX_BLOCK		30000UL	/* queue transmitting block time, 30 s */
 #define TIMER_CHECK_THRESHOLD	9
@@ -240,25 +246,42 @@ static void prvTaskLED( void *pvParameters )
 {
 	/* all variables local to TaskLED */
 	String task = "TaskLED";
-	char unsigned rxData;
-	int unsigned iBtn; /* switch counter, unsigned ensures logical RS */
 	int unsigned ledData = LED_INIT;
+
+	int unsigned iBtn; /* switch counter, unsigned ensures logical RS */
 	int unsigned btnData;
 	int unsigned swcData;
 	int unsigned nextBtnData;
 	int unsigned nextSwcData;
 
+	char unsigned rxData;
+	BaseType_t reception;
+
+	int ledError = 0b1111;
+
 	const TickType_t rxBlockTicks = pdMS_TO_TICKS( QUEUE_RX_BLOCK );
 	const TickType_t delayTicks = pdMS_TO_TICKS( TASKLED_DELAY );
+	const TickType_t errorDutyOnTicks = pdMS_TO_TICKS( ERROR_DUTY_ON );
+	const TickType_t errorDutyOffTicks = pdMS_TO_TICKS( ERROR_DUTY_OFF );
 
 	xil_printf("[%s] started\n", task);
 
 	for( ;; )
 	{
 		/* Block to wait for data arriving on the queue. */
-		xQueueReceive( 	xQueueBtnSw,				/* The queue being read. */
-						&rxData,	/* Data is read into this address. */
-						rxBlockTicks );	/* Block by the receiving block time. */
+		reception =
+				xQueueReceive( 	xQueueBtnSw,				/* The queue being read. */
+								&rxData,	/* Data is read into this address. */
+								rxBlockTicks );	/* Block by the receiving block time. */
+
+		/* if the queue is empty, display an error and stop */
+		if (reception == errQUEUE_EMPTY) {
+			xil_printf("[%s] ERROR: QUEUE IS EMPTY\n", task);
+			XGpio_DiscreteWrite(&OutInst, LED_CHANNEL, ledError);
+			ledError = ~ledError;
+			vTaskDelay( (ledError != 0b0000) ? errorDutyOnTicks : errorDutyOffTicks );
+			continue;
+		}
 
 		/* log the data received */
 		xil_printf("[%s] data received:\t0x%x\t-> ", task, rxData);
