@@ -1,4 +1,4 @@
-16:41:30 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+21:10:28 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -15,9 +15,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  79380	   3400	  89456	 172236	  2a0cc	initials_FreeRTOStm.elf
+  79716	   3400	  89456	 172572	  2a21c	initials_FreeRTOStm.elf
 'Finished building: initials_FreeRTOStm.elf.size'
 ' '
 
-16:41:34 Build Finished (took 4s.365ms)
+21:10:39 Build Finished (took 11s.82ms)
 

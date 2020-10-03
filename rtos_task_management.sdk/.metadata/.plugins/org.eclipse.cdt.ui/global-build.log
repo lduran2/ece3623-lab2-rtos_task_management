@@ -5963,3 +5963,1021 @@ arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
   79380	   3400	  89456	 172236	  2a0cc	initials_FreeRTOStm.elf
 'Finished building: initials_FreeRTOStm.elf.size'
 ' '
+16:48:00 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c:117:13: warning: 'prvTaskSW' declared 'static' but never defined [-Wunused-function]
+ static void prvTaskSW ( void *pvParameters );
+             ^~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79380	   3400	  89456	 172236	  2a0cc	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+16:49:01 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:160:7: error: 'xTaskSW' undeclared (first use in this function); did you mean 'xTaskBTN'?
+      &xTaskSW  );
+       ^~~~~~~
+       xTaskBTN
+../src/initials_FreeRTOStm.c:160:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/initials_FreeRTOStm.c: At top level:
+../src/initials_FreeRTOStm.c:117:13: warning: 'prvTaskSW' used but never defined
+ static void prvTaskSW ( void *pvParameters );
+             ^~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+16:52:11 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:160:7: error: 'xTaskSW' undeclared (first use in this function); did you mean 'xTaskBTN'?
+      &xTaskSW  );
+       ^~~~~~~
+       xTaskBTN
+../src/initials_FreeRTOStm.c:160:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/initials_FreeRTOStm.c: At top level:
+../src/initials_FreeRTOStm.c:117:13: warning: 'prvTaskSW' used but never defined
+ static void prvTaskSW ( void *pvParameters );
+             ^~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+16:52:18 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:160:7: error: 'xTaskSW' undeclared (first use in this function); did you mean 'xTaskBTN'?
+      &xTaskSW  );
+       ^~~~~~~
+       xTaskBTN
+../src/initials_FreeRTOStm.c:160:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/initials_FreeRTOStm.c: At top level:
+../src/initials_FreeRTOStm.c:117:13: warning: 'prvTaskSW' used but never defined
+ static void prvTaskSW ( void *pvParameters );
+             ^~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+16:58:41 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:160:7: error: 'xTaskSW' undeclared (first use in this function); did you mean 'xTaskBTN'?
+      &xTaskSW  );
+       ^~~~~~~
+       xTaskBTN
+../src/initials_FreeRTOStm.c:160:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:322:14: error: 'SW_INIT' undeclared (first use in this function); did you mean 'LED_INIT'?
+  int data =  SW_INIT;
+              ^~~~~~~
+              LED_INIT
+../src/initials_FreeRTOStm.c:347:27: error: 'SW_MASK' undeclared (first use in this function); did you mean 'BTN_MASK'?
+   encodedData = ((data &  SW_MASK) <<  SW_SHIFT);
+                           ^~~~~~~
+                           BTN_MASK
+../src/initials_FreeRTOStm.c:347:40: error: 'SW_SHIFT' undeclared (first use in this function); did you mean 'BTN_SHIFT'?
+   encodedData = ((data &  SW_MASK) <<  SW_SHIFT);
+                                        ^~~~~~~~
+                                        BTN_SHIFT
+../src/initials_FreeRTOStm.c:326:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+17:09:53 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c:112: warning: "BTN_SHIFT" redefined
+ #define BTN_SHIFT 4
+ 
+../src/initials_FreeRTOStm.c:109: note: this is the location of the previous definition
+ #define BTN_SHIFT 0
+ 
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:163:7: error: 'xTaskSW' undeclared (first use in this function); did you mean 'xTaskBTN'?
+      &xTaskSW  );
+       ^~~~~~~
+       xTaskBTN
+../src/initials_FreeRTOStm.c:163:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:325:14: error: 'SW_INIT' undeclared (first use in this function); did you mean 'LED_INIT'?
+  int data =  SW_INIT;
+              ^~~~~~~
+              LED_INIT
+../src/initials_FreeRTOStm.c:350:27: error: 'SW_MASK' undeclared (first use in this function); did you mean 'BTN_MASK'?
+   encodedData = ((data &  SW_MASK) <<  SW_SHIFT);
+                           ^~~~~~~
+                           BTN_MASK
+../src/initials_FreeRTOStm.c:350:40: error: 'SW_SHIFT' undeclared (first use in this function); did you mean 'BTN_SHIFT'?
+   encodedData = ((data &  SW_MASK) <<  SW_SHIFT);
+                                        ^~~~~~~~
+                                        BTN_SHIFT
+../src/initials_FreeRTOStm.c:329:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+17:10:17 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'main':
+../src/initials_FreeRTOStm.c:163:7: error: 'xTaskSW' undeclared (first use in this function); did you mean 'xTaskBTN'?
+      &xTaskSW  );
+       ^~~~~~~
+       xTaskBTN
+../src/initials_FreeRTOStm.c:163:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:329:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+17:10:57 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:330:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79644	   3400	  89456	 172500	  2a1d4	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+17:11:32 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:330:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79644	   3400	  89456	 172500	  2a1d4	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+17:12:12 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:333:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79644	   3400	  89456	 172500	  2a1d4	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+17:12:29 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:333:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskLED':
+../src/initials_FreeRTOStm.c:262:14: warning: 'swcData' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if ((iSwc & swcData & btnData) == iSwc) {
+         ~~~~~^~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79580	   3400	  89456	 172436	  2a194	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+17:14:57 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskLED':
+../src/initials_FreeRTOStm.c:239:6: warning: variable 'nextSwcData' set but not used [-Wunused-but-set-variable]
+  int nextSwcData;
+      ^~~~~~~~~~~
+../src/initials_FreeRTOStm.c:238:6: warning: variable 'nextBtnData' set but not used [-Wunused-but-set-variable]
+  int nextBtnData;
+      ^~~~~~~~~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:336:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskLED':
+../src/initials_FreeRTOStm.c:265:14: warning: 'swcData' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if ((iSwc & swcData & btnData) == iSwc) {
+         ~~~~~^~~~~~~~~
+../src/initials_FreeRTOStm.c:265:24: warning: 'btnData' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if ((iSwc & swcData & btnData) == iSwc) {
+        ~~~~~~~~~~~~~~~~^~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79644	   3400	  89456	 172500	  2a1d4	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+17:15:27 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskLED':
+../src/initials_FreeRTOStm.c:239:6: warning: variable 'nextSwcData' set but not used [-Wunused-but-set-variable]
+  int nextSwcData;
+      ^~~~~~~~~~~
+../src/initials_FreeRTOStm.c:238:6: warning: variable 'nextBtnData' set but not used [-Wunused-but-set-variable]
+  int nextBtnData;
+      ^~~~~~~~~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:336:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskLED':
+../src/initials_FreeRTOStm.c:265:14: warning: 'swcData' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if ((iSwc & swcData & btnData) == iSwc) {
+         ~~~~~^~~~~~~~~
+../src/initials_FreeRTOStm.c:265:24: warning: 'btnData' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if ((iSwc & swcData & btnData) == iSwc) {
+        ~~~~~~~~~~~~~~~~^~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79644	   3400	  89456	 172500	  2a1d4	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+17:30:54 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskLED':
+../src/initials_FreeRTOStm.c:270:10: error: 'nextSwData' undeclared (first use in this function); did you mean 'nextSwcData'?
+    else (nextSwData  != 0b000) {
+          ^~~~~~~~~~
+          nextSwcData
+../src/initials_FreeRTOStm.c:270:10: note: each undeclared identifier is reported only once for each function it appears in
+../src/initials_FreeRTOStm.c:270:31: error: expected ';' before '{' token
+    else (nextSwData  != 0b000) {
+                               ^~
+                               ;
+../src/initials_FreeRTOStm.c:239:6: warning: variable 'nextSwcData' set but not used [-Wunused-but-set-variable]
+  int nextSwcData;
+      ^~~~~~~~~~~
+../src/initials_FreeRTOStm.c:237:6: warning: unused variable 'swcData' [-Wunused-variable]
+  int swcData;
+      ^~~~~~~
+../src/initials_FreeRTOStm.c:236:6: warning: variable 'btnData' set but not used [-Wunused-but-set-variable]
+  int btnData;
+      ^~~~~~~
+../src/initials_FreeRTOStm.c:234:15: warning: unused variable 'iSwc' [-Wunused-variable]
+  int unsigned iSwc; /* switch counter, unsigned ensures logical RS */
+               ^~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:351:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+17:31:04 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskLED':
+../src/initials_FreeRTOStm.c:270:10: error: 'nextSwData' undeclared (first use in this function); did you mean 'nextSwcData'?
+    else (nextSwData  != 0b000) {
+          ^~~~~~~~~~
+          nextSwcData
+../src/initials_FreeRTOStm.c:270:10: note: each undeclared identifier is reported only once for each function it appears in
+../src/initials_FreeRTOStm.c:270:31: error: expected ';' before '{' token
+    else (nextSwData  != 0b000) {
+                               ^~
+                               ;
+../src/initials_FreeRTOStm.c:239:6: warning: variable 'nextSwcData' set but not used [-Wunused-but-set-variable]
+  int nextSwcData;
+      ^~~~~~~~~~~
+../src/initials_FreeRTOStm.c:237:6: warning: unused variable 'swcData' [-Wunused-variable]
+  int swcData;
+      ^~~~~~~
+../src/initials_FreeRTOStm.c:236:6: warning: variable 'btnData' set but not used [-Wunused-but-set-variable]
+  int btnData;
+      ^~~~~~~
+../src/initials_FreeRTOStm.c:234:15: warning: unused variable 'iSwc' [-Wunused-variable]
+  int unsigned iSwc; /* switch counter, unsigned ensures logical RS */
+               ^~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:351:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+17:31:36 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskLED':
+../src/initials_FreeRTOStm.c:271:10: error: 'nextSwData' undeclared (first use in this function); did you mean 'nextSwcData'?
+    else (nextSwData  != 0b000) {
+          ^~~~~~~~~~
+          nextSwcData
+../src/initials_FreeRTOStm.c:271:10: note: each undeclared identifier is reported only once for each function it appears in
+../src/initials_FreeRTOStm.c:271:31: error: expected ';' before '{' token
+    else (nextSwData  != 0b000) {
+                               ^~
+                               ;
+../src/initials_FreeRTOStm.c:239:6: warning: variable 'nextSwcData' set but not used [-Wunused-but-set-variable]
+  int nextSwcData;
+      ^~~~~~~~~~~
+../src/initials_FreeRTOStm.c:237:6: warning: unused variable 'swcData' [-Wunused-variable]
+  int swcData;
+      ^~~~~~~
+../src/initials_FreeRTOStm.c:236:6: warning: variable 'btnData' set but not used [-Wunused-but-set-variable]
+  int btnData;
+      ^~~~~~~
+../src/initials_FreeRTOStm.c:234:15: warning: unused variable 'iSwc' [-Wunused-variable]
+  int unsigned iSwc; /* switch counter, unsigned ensures logical RS */
+               ^~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:352:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+17:31:54 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskLED':
+../src/initials_FreeRTOStm.c:271:22: warning: statement with no effect [-Wunused-value]
+    else (nextSwcData != 0b000) {
+         ~~~~~~~~~~~~~^~~~~~~~~
+../src/initials_FreeRTOStm.c:271:31: error: expected ';' before '{' token
+    else (nextSwcData != 0b000) {
+                               ^~
+                               ;
+../src/initials_FreeRTOStm.c:237:6: warning: unused variable 'swcData' [-Wunused-variable]
+  int swcData;
+      ^~~~~~~
+../src/initials_FreeRTOStm.c:236:6: warning: variable 'btnData' set but not used [-Wunused-but-set-variable]
+  int btnData;
+      ^~~~~~~
+../src/initials_FreeRTOStm.c:234:15: warning: unused variable 'iSwc' [-Wunused-variable]
+  int unsigned iSwc; /* switch counter, unsigned ensures logical RS */
+               ^~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:352:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+17:32:07 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskLED':
+../src/initials_FreeRTOStm.c:271:22: warning: statement with no effect [-Wunused-value]
+    else (nextSwcData != 0b0000) {
+         ~~~~~~~~~~~~~^~~~~~~~~~
+../src/initials_FreeRTOStm.c:271:32: error: expected ';' before '{' token
+    else (nextSwcData != 0b0000) {
+                                ^~
+                                ;
+../src/initials_FreeRTOStm.c:237:6: warning: unused variable 'swcData' [-Wunused-variable]
+  int swcData;
+      ^~~~~~~
+../src/initials_FreeRTOStm.c:236:6: warning: variable 'btnData' set but not used [-Wunused-but-set-variable]
+  int btnData;
+      ^~~~~~~
+../src/initials_FreeRTOStm.c:234:15: warning: unused variable 'iSwc' [-Wunused-variable]
+  int unsigned iSwc; /* switch counter, unsigned ensures logical RS */
+               ^~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:352:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+17:32:14 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:352:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79708	   3400	  89456	 172564	  2a214	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+17:34:11 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:352:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79708	   3400	  89456	 172564	  2a214	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+17:34:19 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:353:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79708	   3400	  89456	 172564	  2a214	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+18:38:58 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+18:40:06 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c:94:15: error: expected ';' before 'char'
+ typedef String char*;
+               ^~~~~
+               ;
+../src/initials_FreeRTOStm.c:94:21: error: expected identifier or '(' before ';' token
+ typedef String char*;
+                     ^
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:355:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/initials_FreeRTOStm.o] Error 1
+18:40:17 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:355:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79708	   3400	  89456	 172564	  2a214	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+18:40:54 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskLED':
+../src/initials_FreeRTOStm.c:235:9: warning: unused variable 'task' [-Wunused-variable]
+  String task = "TaskLED";
+         ^~~~
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:356:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79708	   3400	  89456	 172564	  2a214	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+18:41:24 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:356:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79708	   3400	  89456	 172564	  2a214	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+18:41:41 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:356:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79700	   3400	  89456	 172556	  2a20c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+18:42:07 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:356:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79692	   3400	  89456	 172548	  2a204	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+18:42:31 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:357:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79692	   3400	  89456	 172548	  2a204	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+18:42:45 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:357:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79724	   3400	  89456	 172580	  2a224	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+18:42:56 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:358:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:353:9: warning: unused variable 'task' [-Wunused-variable]
+  String task = "TaskSW ";
+         ^~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79788	   3400	  89456	 172644	  2a264	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+18:43:05 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:358:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79764	   3400	  89456	 172620	  2a24c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+18:43:14 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:358:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79732	   3400	  89456	 172588	  2a22c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+18:44:19 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:358:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79756	   3400	  89456	 172612	  2a244	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+18:45:24 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+../src/initials_FreeRTOStm.c: In function 'prvTaskSW':
+../src/initials_FreeRTOStm.c:359:19: warning: unused variable 'debounceTicks' [-Wunused-variable]
+  const TickType_t debounceTicks = pdMS_TO_TICKS( DEBOUNCE_DELAY );
+                   ^~~~~~~~~~~~~
+../src/initials_FreeRTOStm.c:362:2: warning: 'nextData' is used uninitialized in this function [-Wuninitialized]
+  xil_printf("[%s] switches thrown:\t0x%x from 0x%x\n",
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    task, nextData, data);
+    ~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79812	   3400	  89456	 172668	  2a27c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+18:46:08 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79716	   3400	  89456	 172572	  2a21c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+18:46:55 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+18:47:54 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+18:48:47 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+18:57:28 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+19:10:50 **** Incremental Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+19:21:21 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79716	   3400	  89456	 172572	  2a21c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+19:22:23 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79716	   3400	  89456	 172572	  2a21c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+19:22:28 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79716	   3400	  89456	 172572	  2a21c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
+21:10:28 **** Auto Build of configuration Debug for project initials_FreeRTOStm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/initials_FreeRTOStm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initials_FreeRTOStm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/initials_FreeRTOStm.d" -MT"src/initials_FreeRTOStm.o" -o "src/initials_FreeRTOStm.o" "../src/initials_FreeRTOStm.c"
+'Finished building: ../src/initials_FreeRTOStm.c'
+' '
+'Building target: initials_FreeRTOStm.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../initials_FreeRTOStm_bsp/ps7_cortexa9_0/lib -o "initials_FreeRTOStm.elf"  ./src/initials_FreeRTOStm.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: initials_FreeRTOStm.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size initials_FreeRTOStm.elf  |tee "initials_FreeRTOStm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79716	   3400	  89456	 172572	  2a21c	initials_FreeRTOStm.elf
+'Finished building: initials_FreeRTOStm.elf.size'
+' '
